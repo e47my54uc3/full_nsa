@@ -1,28 +1,101 @@
 == README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
-
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
 
 
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.
+The NSA have created a new API that allows companies to find the location of anybody in the United States. The government decided to join the 21st century and created a JSON API that will give you back a set of identities (up to 100) and their associated locations. Our clients are always looking for better ways to "know their customers" and have informed us that credit bureaus are great for verifying identity information, but they are not very good at helping you verify that the person who entered the identity information is who they say they are. Luckily, real-world locations are a good first step towards accomplishing that, thus we have decided to add the NSA's new location API to BlockScore.
+NSA API
+
+The following is a specification for the API provided by the NSA. You will need to consume this API in order to create your API's response. Be careful, there is a 1 in 50 chance that the API will take 20+ seconds to respond. Most clients don't want to wait that long, in which case you should state that the API is not available with an appropriate JSON error. Also note that names are not guaranteed to be unique.
+Endpoint
+
+
+
+
+NSA API Attributes
+Parameter   Explanation   Type
+first_name  The person's legal first name   String
+last_name   The person's legal last name  String
+phone_location  The exact location of the person provided by their cellphone  Object
+stated_location   The geocoded location of their address  Object
+NSA Response
+
+```javascript
+[
+  {
+    "first_name": "Alain",
+    "last_name": "Meier",
+    "phone_location": {
+      "latitude": 51.5033630,
+      "longitude": -0.1276250,
+      "elevation": 19.36
+    },
+    "stated_location": {
+      "latitude": 65.5033630,
+      "longitude": -0.1276250,
+      "elevation": 19.36
+    }
+  },
+  {
+    "first_name": "Alfred",
+    "last_name": "Hitchcock",
+    "phone_location": {
+      "latitude": 51.5033630,
+      "longitude": -0.1276250,
+      "elevation": 2.19
+    },
+    "stated_location": {
+      "latitude": 62.5033630,
+      "longitude": -1.1276250,
+      "elevation": 30.60
+    }
+  }
+]
+
+```
+Your API
+
+The following is the specification of your API. It should be backed by Ruby (either in Rails or Sinatra). You can setup your API in whatever way you please. For instance, if you would like to use the rails-api flavor of Rails, that is perfectly fine.
+Your API Attributes
+Parameter   Explanation   Type
+first_name  The person's legal first name.  String
+last_name   The person's legal last name.   String
+phone_distance_from_ip  The distance between the person's phone GPS and the person's geocoded IP address.   Float
+stated_distance_from_ip   The distance in KM between the person's stated distance and the person's geocoded IP address.   Float
+stated_distance_from_phone  The distance in KM between the person's stated distance and the person's phone GPS.   Float
+Your Response
+
+{
+  "first_name": "Alain",
+  "last_name": "Meier",
+  "phone_distance_from_ip": 120.5,
+  "stated_distance_from_ip": 50.12,
+  "stated_distance_from_phone": 73.9
+}
+
+Your API Arguments
+Parameter   Explanation   Type
+first_name  The person's legal first name.  String
+last_name   The person's legal last name.   String
+ip_address  The person's IP address (can be arbitrary)  String (IP v4 or v6)
+Your Request
+
+
+
+please visit localhost:3000/location
+with the following request parameters:
+request parameters:
+
+{
+  "first_name": "Alain",
+  "last_name": "Meier",
+  "ip_address": "127.0.0.1"
+}
+
+Response you will receive:
+{
+  "first_name": "Alain",
+  "last_name": "Meier",
+  "phone_distance_from_ip": 120.5,
+  "stated_distance_from_ip": 50.12,
+  "stated_distance_from_phone": 73.9
+}
