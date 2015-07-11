@@ -30,9 +30,8 @@ gem 'active_model_serializers'
 gem 'unicorn'
 gem 'ipaddress'
 gem 'unirest'
-gem 'airborne'
 gem 'pry-rails'
-gem 'timeout'
+
 
 
 group :development do  

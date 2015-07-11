@@ -1,7 +1,6 @@
 require 'rails_helper'
 require 'spec_helper'
-require 'airborne'
-require 'timeout'
+
 
 
 RSpec.describe GeoApiController, type: :controller do
