@@ -13,11 +13,12 @@ Endpoint
 
 NSA API Attributes
 Parameter   Explanation   Type
-first_name  The person's legal first name   String
-last_name   The person's legal last name  String
-phone_location  The exact location of the person provided by their cellphone  Object
-stated_location   The geocoded location of their address  Object
-NSA Response
+first_name:  The person's legal first name   String
+last_name:   The person's legal last name  String
+phone_location:  The exact location of the person provided by their cellphone  Object
+stated_location:   The geocoded location of their address  Object
+
+You will see a list of all NSA data once you open up the application
 
 ```javascript
 [
@@ -52,9 +53,10 @@ NSA Response
 ]
 
 ```
-Your API
+My API
 
-The following is the specification of your API. It should be backed by Ruby (either in Rails or Sinatra). You can setup your API in whatever way you please. For instance, if you would like to use the rails-api flavor of Rails, that is perfectly fine.
+The following is the specification of my API. It is backed by Rails. 
+
 Your API Attributes
 Parameter   Explanation   Type
 first_name  The person's legal first name.  String
@@ -83,7 +85,9 @@ Your Request
 
 please visit localhost:3000/location
 with the following request parameters:
-request parameters:
+first_name
+last_name
+ip_address (This one is optional, it will otherwise default to an SF ip)
 
 {
   "first_name": "Alain",
