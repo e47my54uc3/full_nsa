@@ -57,13 +57,13 @@ My API
 
 The following is the specification of my API. It is backed by Rails. 
 
-Your API Attributes
-Parameter   Explanation   Type
-first_name  The person's legal first name.  String
-last_name   The person's legal last name.   String
-phone_distance_from_ip  The distance between the person's phone GPS and the person's geocoded IP address.   Float
-stated_distance_from_ip   The distance in KM between the person's stated distance and the person's geocoded IP address.   Float
-stated_distance_from_phone  The distance in KM between the person's stated distance and the person's phone GPS.   Float
+
+
+first_name  :    The person's legal first name.  
+last_name   :     The person's legal last name.  
+phone_distance_from_ip   :    The distance between the person's phone GPS and the person's geocoded IP address.   
+stated_distance_from_ip   :    The distance in KM between the person's stated distance and the person's geocoded IP address.  
+stated_distance_from_phone   :   The distance in KM between the person's stated distance and the person's phone GPS.   
 Your Response
 
 {
@@ -74,16 +74,10 @@ Your Response
   "stated_distance_from_phone": 73.9
 }
 
-Your API Arguments
-Parameter   Explanation   Type
-first_name  The person's legal first name.  String
-last_name   The person's legal last name.   String
-ip_address  The person's IP address (can be arbitrary)  String (IP v4 or v6)
-Your Request
-
-
 
 please visit localhost:3000/location
+
+
 with the following request parameters:
 first_name
 last_name
