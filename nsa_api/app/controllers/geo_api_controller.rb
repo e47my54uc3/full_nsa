@@ -61,12 +61,11 @@ class GeoApiController < ApplicationController
           phone_coords = [found[0]["phone_location"]["latitude"], found[0]["phone_location"]["longitude"]]
           stated_coords = [found[0]["stated_location"]["latitude"], found[0]["stated_location"]["longitude"]]
 
-          binding.pry
-          stated_distance_from_phone = distance_km(stated_coords, phone_coords)
+          
+          
           phone_distance_from_ip = distance_km(phone_coords, ip_location)
-
-          binding.pry
           stated_distance_from_ip = distance_km(stated_coords, ip_location)
+          stated_distance_from_phone = distance_km(stated_coords, phone_coords)
           
 
           render json: {first_name: first_name, 
