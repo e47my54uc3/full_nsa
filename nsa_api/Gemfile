@@ -31,6 +31,9 @@ gem 'unicorn'
 gem 'ipaddress'
 gem 'unirest'
 gem 'airborne'
+gem 'pry-rails'
+gem 'timeout'
+
 
 group :development do  
   gem 'guard-rspec'  
@@ -39,7 +42,7 @@ end
 
 group :development, :test do   
   gem 'factory_girl_rails'  
-  gem 'pry-rails'  
+   
   gem 'rspec-rails'  
 end
 
