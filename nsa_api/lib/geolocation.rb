@@ -21,8 +21,9 @@ module GeoLocation
     rad_per_deg = Math::PI/180  # PI / 180
     rkm = 6371                  # Earth radius in kilometers
 
-    dlat_rad = (loc2[0]-loc1[0]) * rad_per_deg  # Delta, converted to rad
-    dlon_rad = (loc2[1]-loc1[1]) * rad_per_deg
+    dlat_rad = (loc2.first-loc1.first) * rad_per_deg  # Delta, converted to rad
+
+    dlon_rad = (loc2.last-loc1.last) * rad_per_deg
 
     lat1_rad, lon1_rad = loc1.map {|i| i * rad_per_deg }
     lat2_rad, lon2_rad = loc2.map {|i| i * rad_per_deg }

@@ -28,7 +28,7 @@ class GeoApiController < ApplicationController
     first_name, last_name, ip = params[:first_name], params[:last_name], params[:ip]
 
     ip_data = config_ip(ip)
-    binding.pry
+    # binding.pry
    
     ip_location = ip_data.body["loc"].split(',').map(&:to_f)
  
@@ -61,9 +61,13 @@ class GeoApiController < ApplicationController
           phone_coords = [found[0]["phone_location"]["latitude"], found[0]["phone_location"]["longitude"]]
           stated_coords = [found[0]["stated_location"]["latitude"], found[0]["stated_location"]["longitude"]]
 
-          phone_distance_from_ip = distance_km(phone_coords, ip_location)
-          stated_distance_from_ip = distance_km(stated_coords, ip_location)
+          binding.pry
           stated_distance_from_phone = distance_km(stated_coords, phone_coords)
+          phone_distance_from_ip = distance_km(phone_coords, ip_location)
+
+          binding.pry
+          stated_distance_from_ip = distance_km(stated_coords, ip_location)
+          
 
           render json: {first_name: first_name, 
                         last_name: last_name, 
