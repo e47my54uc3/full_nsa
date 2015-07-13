@@ -32,6 +32,7 @@ gem 'ipaddress'
 gem 'unirest'
 gem 'pry-rails'
 gem 'faraday'
+gem 'faraday_middleware'
 
 
 

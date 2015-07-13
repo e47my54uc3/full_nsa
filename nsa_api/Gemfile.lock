@@ -78,6 +78,8 @@ GEM
       i18n (~> 0.5)
     faraday (0.9.1)
       multipart-post (>= 1.2, < 3)
+    faraday_middleware (0.10.0)
+      faraday (>= 0.7.4, < 0.10)
     ffi (1.9.10)
     formatador (0.2.5)
     globalid (0.3.5)
@@ -278,6 +280,7 @@ DEPENDENCIES
   factory_girl_rails
   faker
   faraday
+  faraday_middleware
   guard-rspec
   ipaddress
   jbuilder (~> 2.0)

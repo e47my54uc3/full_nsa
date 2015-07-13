@@ -36,7 +36,7 @@ RSpec.describe GeoApiController, type: :controller do
 
       it "should return a 404 status if unavailable" do
         get :show, {:first_name => "Raghu", :last_name => "Reddy", ip: "50.250.223.177"}
-        response.status.should be_in([404, 503])
+        response.status.should be(404)
       end
 
       it "should return an error if a user data is unavailable" do
