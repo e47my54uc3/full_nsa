@@ -22,9 +22,10 @@ class GeoApiController < ApplicationController
 
 
   def show
-    first_name, last_name, ip = params[:first_name], params[:last_name], params[:ip]
+    first_name, last_name = params[:first_name], params[:last_name]
 
-    ip_coords = config_ip_coords(ip)
+    ip_coords = config_ip_coords(params[:ip])
+    
     user_info = timed_get_user(first_name, last_name)
 
     if user_info.empty?

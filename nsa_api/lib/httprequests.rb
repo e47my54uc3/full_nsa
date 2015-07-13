@@ -3,9 +3,9 @@ module HttpRequests
 
   def open_connection(url)
     @conn = Faraday.new(:url => url) do |faraday|
-      faraday.request  :url_encoded             # form-encode POST params
-      faraday.response :logger                  # log requests to STDOUT
-      faraday.adapter  Faraday.default_adapter  # make requests with Net::HTTP
+      faraday.request  :url_encoded             
+      faraday.response :logger                  
+      faraday.adapter  Faraday.default_adapter  
     end
   end
 
