@@ -3,9 +3,9 @@ module GeoLocation
   private
   
   def get_ip_coords(ip)
-    conn = Unirest.get "http://ipinfo.io/#{ip}", #will default to an ip, get geo location
-                        headers:{ "Accept" => "application/json" }
-    conn.body["loc"].split(',').map(&:to_f)
+    resp = Faraday.get("http://ipinfo.io/#{ip}/json")
+    coords = JSON.parse(resp.body)
+    coords["loc"].split(',').map(&:to_f)
   end
 
   def distance_km(loc1, loc2) #geodistance via haversine formula

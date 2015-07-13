@@ -2,7 +2,6 @@ require 'configurations'
 require 'geolocation'
 require 'httprequests'
 
-
 class GeoApiController < ApplicationController
   include Configurations
   include GeoLocation
@@ -15,10 +14,8 @@ class GeoApiController < ApplicationController
     render json: { geo_api: request.body}, status: 200   
   end
 
-
   def show
     ip_coords = config_ip_coords(params[:ip])
-
     user_info = timed_get_user(params[:first_name], params[:last_name])
 
     return (render json: @delayed, status: 408) if @delayed
