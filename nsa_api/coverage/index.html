@@ -14,27 +14,27 @@
       <img src="./assets/0.10.0/loading.gif" alt="loading"/>
     </div>
     <div id="wrapper" style="display:none;">
-      <div class="timestamp">Generated <abbr class="timeago" title="2015-07-13T00:48:59-07:00">2015-07-13T00:48:59-07:00</abbr></div>
+      <div class="timestamp">Generated <abbr class="timeago" title="2015-07-13T13:56:50-07:00">2015-07-13T13:56:50-07:00</abbr></div>
       <ul class="group_tabs"></ul>
 
       <div id="content">
         <div class="file_list_container" id="AllFiles">
   <h2>
     <span class="group_name">All Files</span>
-    (<span class="covered_percent"><span class="green">97.73%</span></span>
+    (<span class="covered_percent"><span class="green">96.48%</span></span>
      covered at
      <span class="covered_strength">
        <span class="green">
-         4.09
+         4.07
        </span>
     </span> hits/line)
   </h2>
   <a name="AllFiles"></a>
   <div>
-    <b>21</b> files in total.
-    <b>132</b> relevant lines. 
-    <span class="green"><b>129</b> lines covered</span> and
-    <span class="red"><b>3</b> lines missed </span>
+    <b>22</b> files in total.
+    <b>142</b> relevant lines. 
+    <span class="green"><b>137</b> lines covered</span> and
+    <span class="red"><b>5</b> lines missed </span>
   </div>
   <table class="file_list">
     <thead>
@@ -63,11 +63,11 @@
       <tr>
         <td class="strong"><a href="#b938a268bf352795cad8d7e8abb238c65dc1a574" class="src_link" title="app/controllers/geo_api_controller.rb">app/controllers/geo_api_controller.rb</a></td>
         <td class="green strong">100.0 %</td>
-        <td>48</td>
-        <td>23</td>
-        <td>23</td>
+        <td>43</td>
+        <td>22</td>
+        <td>22</td>
         <td>0</td>
-        <td>1.6</td>
+        <td>1.5</td>
       </tr>
       
       <tr>
@@ -221,23 +221,33 @@
       </tr>
       
       <tr>
-        <td class="strong"><a href="#bdf14ba32ca7edc1d7a68f7efc7b96d4ea99e296" class="src_link" title="lib/geolocation.rb">lib/geolocation.rb</a></td>
+        <td class="strong"><a href="#4aab32ad0e35f468220d1f03df3ea15043d7a432" class="src_link" title="lib/geo_location.rb">lib/geo_location.rb</a></td>
         <td class="green strong">100.0 %</td>
         <td>28</td>
-        <td>15</td>
-        <td>15</td>
+        <td>16</td>
+        <td>16</td>
         <td>0</td>
-        <td>3.3</td>
+        <td>4.9</td>
       </tr>
       
       <tr>
-        <td class="strong"><a href="#146ec0f2fd3b64235aae6d55fab6d47c50f459ec" class="src_link" title="lib/httprequests.rb">lib/httprequests.rb</a></td>
-        <td class="green strong">100.0 %</td>
+        <td class="strong"><a href="#7f70455fb63cdda98ffb435e28887f023ac17f59" class="src_link" title="lib/http_requests.rb">lib/http_requests.rb</a></td>
+        <td class="green strong">90.48 %</td>
         <td>37</td>
         <td>21</td>
-        <td>21</td>
+        <td>19</td>
+        <td>2</td>
+        <td>17.3</td>
+      </tr>
+      
+      <tr>
+        <td class="strong"><a href="#0060fae2d9b88c41b3e76c9911fa57756b38a698" class="src_link" title="spec/modules/geo_location_spec.rb">spec/modules/geo_location_spec.rb</a></td>
+        <td class="green strong">100.0 %</td>
+        <td>23</td>
+        <td>10</td>
+        <td>10</td>
         <td>0</td>
-        <td>17.4</td>
+        <td>1.0</td>
       </tr>
       
       <tr>
@@ -247,7 +257,7 @@
         <td>11</td>
         <td>10</td>
         <td>1</td>
-        <td>2.0</td>
+        <td>2.5</td>
       </tr>
       
       <tr>
@@ -311,8 +321,8 @@
     <h3>app/controllers/geo_api_controller.rb</h3>
     <h4><span class="green">100.0 %</span> covered</h4>
     <div>
-      <b>23</b> relevant lines. 
-      <span class="green"><b>23</b> lines covered</span> and
+      <b>22</b> relevant lines. 
+      <span class="green"><b>22</b> lines covered</span> and
       <span class="red"><b>0</b> lines missed.</span>
     </div>
   </div>
@@ -329,13 +339,13 @@
         <li class="covered" data-hits="1" data-linenumber="2">
           <span class="hits">1</span>
           
-          <code class="ruby">require &#39;geolocation&#39;</code>
+          <code class="ruby">require &#39;geo_location&#39;</code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="3">
           <span class="hits">1</span>
           
-          <code class="ruby">require &#39;httprequests&#39;</code>
+          <code class="ruby">require &#39;http_requests&#39;</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="4">
@@ -344,265 +354,235 @@
           <code class="ruby"></code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="5">
-          
-          
-          <code class="ruby"></code>
-        </li>
-      
-        <li class="covered" data-hits="1" data-linenumber="6">
+        <li class="covered" data-hits="1" data-linenumber="5">
           <span class="hits">1</span>
           
           <code class="ruby">class GeoApiController &lt; ApplicationController</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="7">
+        <li class="covered" data-hits="1" data-linenumber="6">
           <span class="hits">1</span>
           
           <code class="ruby">  include Configurations</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="8">
+        <li class="covered" data-hits="1" data-linenumber="7">
           <span class="hits">1</span>
           
           <code class="ruby">  include GeoLocation</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="9">
+        <li class="covered" data-hits="1" data-linenumber="8">
           <span class="hits">1</span>
           
           <code class="ruby">  include HttpRequests</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="10">
+        <li class="never" data-hits="" data-linenumber="9">
           
           
           <code class="ruby">  </code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="11">
+        <li class="covered" data-hits="1" data-linenumber="10">
           <span class="hits">1</span>
           
           <code class="ruby">  def index</code>
         </li>
       
-        <li class="covered" data-hits="2" data-linenumber="12">
+        <li class="covered" data-hits="2" data-linenumber="11">
           <span class="hits">2</span>
           
           <code class="ruby">    request = timed_get_all</code>
         </li>
       
-        <li class="covered" data-hits="2" data-linenumber="13">
+        <li class="covered" data-hits="2" data-linenumber="12">
           <span class="hits">2</span>
           
           <code class="ruby">    return (render json: @delayed, status: 408) if @delayed</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="14">
+        <li class="never" data-hits="" data-linenumber="13">
           
           
           <code class="ruby"></code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="15">
-          <span class="hits">1</span>
+        <li class="covered" data-hits="2" data-linenumber="14">
+          <span class="hits">2</span>
           
           <code class="ruby">    render json: { geo_api: request.body}, status: 200   </code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="15">
+          
+          
+          <code class="ruby">  end</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="16">
           
           
-          <code class="ruby">  end</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="17">
-          
-          
           <code class="ruby"></code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="18">
-          
-          
-          <code class="ruby"></code>
-        </li>
-      
-        <li class="covered" data-hits="1" data-linenumber="19">
+        <li class="covered" data-hits="1" data-linenumber="17">
           <span class="hits">1</span>
           
           <code class="ruby">  def show</code>
         </li>
       
-        <li class="covered" data-hits="3" data-linenumber="20">
-          <span class="hits">3</span>
-          
-          <code class="ruby">    first_name, last_name = params[:first_name], params[:last_name]</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="21">
-          
-          
-          <code class="ruby"></code>
-        </li>
-      
-        <li class="covered" data-hits="3" data-linenumber="22">
+        <li class="covered" data-hits="3" data-linenumber="18">
           <span class="hits">3</span>
           
           <code class="ruby">    ip_coords = config_ip_coords(params[:ip])</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="23">
-          
-          
-          <code class="ruby"></code>
-        </li>
-      
-        <li class="covered" data-hits="3" data-linenumber="24">
+        <li class="covered" data-hits="3" data-linenumber="19">
           <span class="hits">3</span>
           
-          <code class="ruby">    user_info = timed_get_user(first_name, last_name)</code>
+          <code class="ruby">    user_info = timed_get_user(params[:first_name], params[:last_name])</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="25">
+        <li class="never" data-hits="" data-linenumber="20">
           
           
           <code class="ruby"></code>
         </li>
       
-        <li class="covered" data-hits="3" data-linenumber="26">
+        <li class="covered" data-hits="3" data-linenumber="21">
           <span class="hits">3</span>
           
           <code class="ruby">    return (render json: @delayed, status: 408) if @delayed</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="27">
+        <li class="never" data-hits="" data-linenumber="22">
           
           
           <code class="ruby"></code>
         </li>
       
-        <li class="covered" data-hits="3" data-linenumber="28">
+        <li class="covered" data-hits="3" data-linenumber="23">
           <span class="hits">3</span>
           
           <code class="ruby">    if user_info.empty?</code>
         </li>
       
-        <li class="covered" data-hits="2" data-linenumber="29">
+        <li class="covered" data-hits="2" data-linenumber="24">
           <span class="hits">2</span>
           
           <code class="ruby">      render json: {</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="30">
+        <li class="never" data-hits="" data-linenumber="25">
           
           
           <code class="ruby">                    error: &quot;No user location data available.&quot;,</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="31">
+        <li class="never" data-hits="" data-linenumber="26">
           
           
           <code class="ruby">                    status: 404</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="32">
+        <li class="never" data-hits="" data-linenumber="27">
           
           
           <code class="ruby">                  }, status: 404</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="33">
+        <li class="never" data-hits="" data-linenumber="28">
           
           
           <code class="ruby">    else  </code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="34">
+        <li class="covered" data-hits="1" data-linenumber="29">
           <span class="hits">1</span>
           
           <code class="ruby">      parse_coords(user_info)</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="35">
+        <li class="never" data-hits="" data-linenumber="30">
           
           
           <code class="ruby"></code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="36">
+        <li class="covered" data-hits="1" data-linenumber="31">
           <span class="hits">1</span>
           
           <code class="ruby">      phone_distance_from_ip = distance_km(@phone_coords, ip_coords)</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="37">
+        <li class="covered" data-hits="1" data-linenumber="32">
           <span class="hits">1</span>
           
           <code class="ruby">      stated_distance_from_ip = distance_km(@stated_coords, ip_coords)</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="38">
+        <li class="covered" data-hits="1" data-linenumber="33">
           <span class="hits">1</span>
           
           <code class="ruby">      stated_distance_from_phone = distance_km(@stated_coords, @phone_coords)</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="39">
+        <li class="never" data-hits="" data-linenumber="34">
           
           
           <code class="ruby">  </code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="40">
+        <li class="covered" data-hits="1" data-linenumber="35">
           <span class="hits">1</span>
           
-          <code class="ruby">      render json: {first_name: first_name, </code>
+          <code class="ruby">      render json: {first_name: params[:first_name], </code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="41">
+        <li class="never" data-hits="" data-linenumber="36">
           
           
-          <code class="ruby">                    last_name: last_name, </code>
+          <code class="ruby">                    last_name: params[:last_name], </code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="42">
+        <li class="never" data-hits="" data-linenumber="37">
           
           
           <code class="ruby">                    phone_distance_from_ip: phone_distance_from_ip, </code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="43">
+        <li class="never" data-hits="" data-linenumber="38">
           
           
           <code class="ruby">                    stated_distance_from_ip: stated_distance_from_ip,</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="44">
+        <li class="never" data-hits="" data-linenumber="39">
           
           
           <code class="ruby">                    stated_distance_from_phone: stated_distance_from_phone</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="45">
+        <li class="never" data-hits="" data-linenumber="40">
           
           
           <code class="ruby">                    }, status: 200</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="46">
+        <li class="never" data-hits="" data-linenumber="41">
           
           
           <code class="ruby">    end</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="47">
+        <li class="never" data-hits="" data-linenumber="42">
           
           
           <code class="ruby">  end</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="48">
+        <li class="never" data-hits="" data-linenumber="43">
           
           
           <code class="ruby">end</code>
@@ -2268,13 +2248,13 @@
   </pre>
 </div>
       
-        <div class="source_table" id="bdf14ba32ca7edc1d7a68f7efc7b96d4ea99e296">
+        <div class="source_table" id="4aab32ad0e35f468220d1f03df3ea15043d7a432">
   <div class="header">
-    <h3>lib/geolocation.rb</h3>
+    <h3>lib/geo_location.rb</h3>
     <h4><span class="green">100.0 %</span> covered</h4>
     <div>
-      <b>15</b> relevant lines. 
-      <span class="green"><b>15</b> lines covered</span> and
+      <b>16</b> relevant lines. 
+      <span class="green"><b>16</b> lines covered</span> and
       <span class="red"><b>0</b> lines missed.</span>
     </div>
   </div>
@@ -2315,19 +2295,19 @@
         <li class="covered" data-hits="3" data-linenumber="6">
           <span class="hits">3</span>
           
-          <code class="ruby">    conn = Unirest.get &quot;http://ipinfo.io/#{ip}&quot;, #will default to an ip, get geo location</code>
+          <code class="ruby">    resp = Faraday.get(&quot;http://ipinfo.io/#{ip}/json&quot;)</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="7">
+        <li class="covered" data-hits="3" data-linenumber="7">
+          <span class="hits">3</span>
           
-          
-          <code class="ruby">                        headers:{ &quot;Accept&quot; =&gt; &quot;application/json&quot; }</code>
+          <code class="ruby">    coords = JSON.parse(resp.body)</code>
         </li>
       
         <li class="covered" data-hits="3" data-linenumber="8">
           <span class="hits">3</span>
           
-          <code class="ruby">    conn.body[&quot;loc&quot;].split(&#39;,&#39;).map(&amp;:to_f)</code>
+          <code class="ruby">    coords[&quot;loc&quot;].split(&#39;,&#39;).map(&amp;:to_f)</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="9">
@@ -2348,14 +2328,14 @@
           <code class="ruby">  def distance_km(loc1, loc2) #geodistance via haversine formula</code>
         </li>
       
-        <li class="covered" data-hits="3" data-linenumber="12">
-          <span class="hits">3</span>
+        <li class="covered" data-hits="5" data-linenumber="12">
+          <span class="hits">5</span>
           
           <code class="ruby">    rad_per_deg = Math::PI/180  # PI / 180</code>
         </li>
       
-        <li class="covered" data-hits="3" data-linenumber="13">
-          <span class="hits">3</span>
+        <li class="covered" data-hits="5" data-linenumber="13">
+          <span class="hits">5</span>
           
           <code class="ruby">    rkm = 6371                  # Earth radius in kilometers</code>
         </li>
@@ -2366,8 +2346,8 @@
           <code class="ruby"></code>
         </li>
       
-        <li class="covered" data-hits="3" data-linenumber="15">
-          <span class="hits">3</span>
+        <li class="covered" data-hits="5" data-linenumber="15">
+          <span class="hits">5</span>
           
           <code class="ruby">    dlat_rad = (loc2.first-loc1.first) * rad_per_deg  # Delta, converted to rad</code>
         </li>
@@ -2378,8 +2358,8 @@
           <code class="ruby"></code>
         </li>
       
-        <li class="covered" data-hits="3" data-linenumber="17">
-          <span class="hits">3</span>
+        <li class="covered" data-hits="5" data-linenumber="17">
+          <span class="hits">5</span>
           
           <code class="ruby">    dlon_rad = (loc2.last-loc1.last) * rad_per_deg</code>
         </li>
@@ -2390,14 +2370,14 @@
           <code class="ruby"></code>
         </li>
       
-        <li class="covered" data-hits="9" data-linenumber="19">
-          <span class="hits">9</span>
+        <li class="covered" data-hits="15" data-linenumber="19">
+          <span class="hits">15</span>
           
           <code class="ruby">    lat1_rad, lon1_rad = loc1.map {|i| i * rad_per_deg }</code>
         </li>
       
-        <li class="covered" data-hits="9" data-linenumber="20">
-          <span class="hits">9</span>
+        <li class="covered" data-hits="15" data-linenumber="20">
+          <span class="hits">15</span>
           
           <code class="ruby">    lat2_rad, lon2_rad = loc2.map {|i| i * rad_per_deg }</code>
         </li>
@@ -2408,14 +2388,14 @@
           <code class="ruby"></code>
         </li>
       
-        <li class="covered" data-hits="3" data-linenumber="22">
-          <span class="hits">3</span>
+        <li class="covered" data-hits="5" data-linenumber="22">
+          <span class="hits">5</span>
           
           <code class="ruby">    a = Math.sin(dlat_rad/2)**2 + Math.cos(lat1_rad) * Math.cos(lat2_rad) * Math.sin(dlon_rad/2)**2</code>
         </li>
       
-        <li class="covered" data-hits="3" data-linenumber="23">
-          <span class="hits">3</span>
+        <li class="covered" data-hits="5" data-linenumber="23">
+          <span class="hits">5</span>
           
           <code class="ruby">    c = 2 * Math::atan2(Math::sqrt(a), Math::sqrt(1-a))</code>
         </li>
@@ -2426,8 +2406,8 @@
           <code class="ruby"></code>
         </li>
       
-        <li class="covered" data-hits="3" data-linenumber="25">
-          <span class="hits">3</span>
+        <li class="covered" data-hits="5" data-linenumber="25">
+          <span class="hits">5</span>
           
           <code class="ruby">    rkm * c # Delta in meters</code>
         </li>
@@ -2454,14 +2434,14 @@
   </pre>
 </div>
       
-        <div class="source_table" id="146ec0f2fd3b64235aae6d55fab6d47c50f459ec">
+        <div class="source_table" id="7f70455fb63cdda98ffb435e28887f023ac17f59">
   <div class="header">
-    <h3>lib/httprequests.rb</h3>
-    <h4><span class="green">100.0 %</span> covered</h4>
+    <h3>lib/http_requests.rb</h3>
+    <h4><span class="green">90.48 %</span> covered</h4>
     <div>
       <b>21</b> relevant lines. 
-      <span class="green"><b>21</b> lines covered</span> and
-      <span class="red"><b>0</b> lines missed.</span>
+      <span class="green"><b>19</b> lines covered</span> and
+      <span class="red"><b>2</b> lines missed.</span>
     </div>
   </div>
   
@@ -2582,14 +2562,14 @@
           <code class="ruby">      end</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="20">
-          <span class="hits">1</span>
+        <li class="missed" data-hits="0" data-linenumber="20">
+          
           
           <code class="ruby">    rescue Faraday::Error::ConnectionFailed, Faraday::TimeoutError =&gt; e</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="21">
-          <span class="hits">1</span>
+        <li class="missed" data-hits="0" data-linenumber="21">
+          
           
           <code class="ruby">      @delayed = {error: &quot;Uh oh! We&#39;re experiencing heavy traffic right now.. please try again in a moment&quot;,</code>
         </li>
@@ -2694,6 +2674,162 @@
   </pre>
 </div>
       
+        <div class="source_table" id="0060fae2d9b88c41b3e76c9911fa57756b38a698">
+  <div class="header">
+    <h3>spec/modules/geo_location_spec.rb</h3>
+    <h4><span class="green">100.0 %</span> covered</h4>
+    <div>
+      <b>10</b> relevant lines. 
+      <span class="green"><b>10</b> lines covered</span> and
+      <span class="red"><b>0</b> lines missed.</span>
+    </div>
+  </div>
+  
+  <pre>
+    <ol>
+      
+        <li class="covered" data-hits="1" data-linenumber="1">
+          <span class="hits">1</span>
+          
+          <code class="ruby">require &#39;geo_location&#39;</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="2">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="3">
+          <span class="hits">1</span>
+          
+          <code class="ruby">RSpec.configure do |c|</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="4">
+          <span class="hits">1</span>
+          
+          <code class="ruby">  c.include GeoLocation</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="5">
+          
+          
+          <code class="ruby">end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="6">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="7">
+          <span class="hits">1</span>
+          
+          <code class="ruby">RSpec.describe GeoLocation do</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="8">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="9">
+          <span class="hits">1</span>
+          
+          <code class="ruby">  context &quot;distance calculations&quot; do</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="10">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    it &quot;has access to the helper methods defined in the module&quot; do</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="11">
+          <span class="hits">1</span>
+          
+          <code class="ruby">      test_location = distance_km([23, 53], [-2, 32])</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="12">
+          <span class="hits">1</span>
+          
+          <code class="ruby">      expect(test_location.present?).to be(true)</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="13">
+          
+          
+          <code class="ruby">    end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="14">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="15">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    it &quot;responds with the correct value&quot; do</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="16">
+          <span class="hits">1</span>
+          
+          <code class="ruby">      expect(distance_km([23, 53], [-2, 32]).round(4)).to eq(3592.2678)</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="17">
+          
+          
+          <code class="ruby">    end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="18">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="19">
+          
+          
+          <code class="ruby">  end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="20">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="21">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="22">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="23">
+          
+          
+          <code class="ruby">end</code>
+        </li>
+      
+    </ol>
+  </pre>
+</div>
+      
         <div class="source_table" id="4df509014b59b6f1bb8142dd669658b25718b1b3">
   <div class="header">
     <h3>spec/support/databasecleaner.rb</h3>
@@ -2762,8 +2898,8 @@
           <code class="ruby">config.before(:each) do  </code>
         </li>
       
-        <li class="covered" data-hits="5" data-linenumber="10">
-          <span class="hits">5</span>
+        <li class="covered" data-hits="7" data-linenumber="10">
+          <span class="hits">7</span>
           
           <code class="ruby">DatabaseCleaner.strategy = :transaction  </code>
         </li>
@@ -2810,8 +2946,8 @@
           <code class="ruby">config.before(:each) do  </code>
         </li>
       
-        <li class="covered" data-hits="5" data-linenumber="18">
-          <span class="hits">5</span>
+        <li class="covered" data-hits="7" data-linenumber="18">
+          <span class="hits">7</span>
           
           <code class="ruby">DatabaseCleaner.start  </code>
         </li>
@@ -2834,8 +2970,8 @@
           <code class="ruby">config.after(:each) do  </code>
         </li>
       
-        <li class="covered" data-hits="5" data-linenumber="22">
-          <span class="hits">5</span>
+        <li class="covered" data-hits="7" data-linenumber="22">
+          <span class="hits">7</span>
           
           <code class="ruby">DatabaseCleaner.clean  </code>
         </li>
