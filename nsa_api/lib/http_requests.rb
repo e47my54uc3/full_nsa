@@ -14,8 +14,8 @@ module HttpRequests
     begin
       @conn.get do |req|
         req.url '/api/people'
-        req.options.timeout = 1
-        req.options.open_timeout = 1
+        req.options.timeout = 2
+        req.options.open_timeout = 2
       end
     rescue Faraday::Error::ConnectionFailed, Faraday::TimeoutError => e
       @delayed = {error: "Uh oh! We're experiencing heavy traffic right now.. please try again in a moment",
