@@ -10,7 +10,7 @@ class GeoApiController < ApplicationController
   
 
   def index
-    request = asynch_get
+    request = asynch_get_all
     
     if request.status == 200
      render json: request.body
@@ -25,14 +25,9 @@ class GeoApiController < ApplicationController
   def show
     first_name, last_name, ip = params[:first_name], params[:last_name], params[:ip]
 
-    ip_data = config_ip(ip)
-   
-    ip_location = ip_data.body["loc"].split(',').map(&:to_f)
-
+    ip_coords = config_ip(ip)
     found = asynch_get_specific(first_name, last_name)
 
-   
- 
     if found.empty?
       render json: {
                     error: "No user location data available.",
@@ -42,9 +37,9 @@ class GeoApiController < ApplicationController
   
           phone_coords = [found[0]["phone_location"]["latitude"], found[0]["phone_location"]["longitude"]]
           stated_coords = [found[0]["stated_location"]["latitude"], found[0]["stated_location"]["longitude"]]
-        
-          phone_distance_from_ip = distance_km(phone_coords, ip_location)
-          stated_distance_from_ip = distance_km(stated_coords, ip_location)
+
+          phone_distance_from_ip = distance_km(phone_coords, ip_coords)
+          stated_distance_from_ip = distance_km(stated_coords, ip_coords)
           stated_distance_from_phone = distance_km(stated_coords, phone_coords)
           
 

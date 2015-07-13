@@ -1,8 +1,8 @@
 module HttpRequests
   private
 
-  def open_connection
-    @conn = Faraday.new(:url => 'https://gov.blockscore.com') do |faraday|
+  def open_connection(url)
+    @conn = Faraday.new(:url => url) do |faraday|
       faraday.request  :url_encoded             # form-encode POST params
       faraday.response :logger                  # log requests to STDOUT
       faraday.adapter  Faraday.default_adapter  # make requests with Net::HTTP
@@ -10,7 +10,7 @@ module HttpRequests
   end
 
   def asynch_get_all
-    open_connection
+    open_connection('https://gov.blockscore.com')
 
     @conn.get do |req|
       req.url '/api/people'

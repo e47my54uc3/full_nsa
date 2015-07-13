@@ -10,6 +10,10 @@ module Configurations
     end
   end
 
+  def config_distance
+
+  end
+
   # def config_params
   #   @first_name, @last_name, @ip = params[:first_name], params[:last_name], params[:ip]
   # end

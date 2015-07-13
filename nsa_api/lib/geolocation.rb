@@ -2,19 +2,10 @@
 module GeoLocation
   private
   
-  def config_ip(string_ip)
-    if IPAddress.valid?(string_ip) 
-      puts "Ip is ok"
-      get_ip_location(string_ip)
-    else
-      puts "Defaulting to an sf ip"
-      get_ip_location("24.7.88.70")
-    end
-  end
-
   def get_ip_location(ip)
-    Unirest.get "http://ipinfo.io/#{ip}", #will default to an ip, get geo location
+    conn = Unirest.get "http://ipinfo.io/#{ip}", #will default to an ip, get geo location
                         headers:{ "Accept" => "application/json" }
+    conn.body["loc"].split(',').map(&:to_f)
   end
 
   def distance_km(loc1, loc2) #geodistance via haversine formula
