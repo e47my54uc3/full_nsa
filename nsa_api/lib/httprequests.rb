@@ -11,16 +11,26 @@ module HttpRequests
 
   def timed_get_all
     open_connection('https://gov.blockscore.com')
-
-    @conn.get do |req|
-      req.url '/api/people'
-      req.options.timeout = 1
-      req.options.open_timeout = 1
+    begin
+      @conn.get do |req|
+        req.url '/api/people'
+        req.options.timeout = 1
+        req.options.open_timeout = 1
+      end
+    rescue Faraday::Error::ConnectionFailed, Faraday::TimeoutError => e
+      @delayed = {error: "Uh oh! We're experiencing heavy traffic right now.. please try again in a moment",
+        status: 408
+      }
     end
+
   end
 
   def timed_get_user(first_name, last_name)
-    timed_get_all.body.select do |person|
+    timed = timed_get_all
+    
+    return @delayed if @delayed
+  
+    timed.body.select do |person|
         person["last_name"] == last_name && person["first_name"] == first_name
     end
   end

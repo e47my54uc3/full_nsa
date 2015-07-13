@@ -10,14 +10,9 @@ class GeoApiController < ApplicationController
   
   def index
     request = timed_get_all
+    return (render json: @delayed, status: 408) if @delayed
 
-    if request.status == 200
-     render json: { geo_api: request.body}
-    else
-      render json: {error: "Uh oh! We're experiencing heavy traffic right now.. please try again in a moment",
-        status: 503
-      }, status: 503
-    end                 
+    render json: { geo_api: request.body}, status: 200   
   end
 
 
@@ -27,6 +22,8 @@ class GeoApiController < ApplicationController
     ip_coords = config_ip_coords(params[:ip])
 
     user_info = timed_get_user(first_name, last_name)
+
+    return (render json: @delayed, status: 408) if @delayed
 
     if user_info.empty?
       render json: {

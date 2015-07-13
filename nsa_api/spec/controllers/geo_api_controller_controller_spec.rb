@@ -9,7 +9,7 @@ RSpec.describe GeoApiController, type: :controller do
     context "process api calls gracefully" do
        it "should handle timeouts gracefully" do
         get :index
-        response.status.should be_in([200, 503])
+        response.status.should be_in([200, 408])
       end
 
       it "should be successful for 98% of queries" do
@@ -29,7 +29,7 @@ RSpec.describe GeoApiController, type: :controller do
           json = JSON.parse(response.body)
           json.length.should be(5)
         else
-          response.status.should be(503)
+          response.status.should be(408)
         end
       end
 
