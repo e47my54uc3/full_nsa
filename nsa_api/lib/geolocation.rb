@@ -2,7 +2,7 @@
 module GeoLocation
   private
   
-  def get_ip_location(ip)
+  def get_ip_coords(ip)
     conn = Unirest.get "http://ipinfo.io/#{ip}", #will default to an ip, get geo location
                         headers:{ "Accept" => "application/json" }
     conn.body["loc"].split(',').map(&:to_f)

@@ -8,9 +8,8 @@ class GeoApiController < ApplicationController
   include GeoLocation
   include HttpRequests
   
-
   def index
-    request = asynch_get_all
+    request = timed_get_all
     
     if request.status == 200
      render json: request.body
@@ -25,30 +24,27 @@ class GeoApiController < ApplicationController
   def show
     first_name, last_name, ip = params[:first_name], params[:last_name], params[:ip]
 
-    ip_coords = config_ip(ip)
-    found = asynch_get_specific(first_name, last_name)
+    ip_coords = config_ip_coords(ip)
+    user_info = timed_get_user(first_name, last_name)
 
-    if found.empty?
+    if user_info.empty?
       render json: {
                     error: "No user location data available.",
                     status: 404
                   }, status: 404
-    else
+    else  
+      parse_coords(user_info)
+
+      phone_distance_from_ip = distance_km(@phone_coords, ip_coords)
+      stated_distance_from_ip = distance_km(@stated_coords, ip_coords)
+      stated_distance_from_phone = distance_km(@stated_coords, @phone_coords)
   
-          phone_coords = [found[0]["phone_location"]["latitude"], found[0]["phone_location"]["longitude"]]
-          stated_coords = [found[0]["stated_location"]["latitude"], found[0]["stated_location"]["longitude"]]
-
-          phone_distance_from_ip = distance_km(phone_coords, ip_coords)
-          stated_distance_from_ip = distance_km(stated_coords, ip_coords)
-          stated_distance_from_phone = distance_km(stated_coords, phone_coords)
-          
-
-          render json: {first_name: first_name, 
-                        last_name: last_name, 
-                        phone_distance_from_ip: phone_distance_from_ip, 
-                        stated_distance_from_ip: stated_distance_from_ip,
-                        stated_distance_from_phone: stated_distance_from_phone
-                        }, status: 200
+      render json: {first_name: first_name, 
+                    last_name: last_name, 
+                    phone_distance_from_ip: phone_distance_from_ip, 
+                    stated_distance_from_ip: stated_distance_from_ip,
+                    stated_distance_from_phone: stated_distance_from_phone
+                    }, status: 200
     end
   end
 end

@@ -9,7 +9,7 @@ module HttpRequests
     end
   end
 
-  def asynch_get_all
+  def timed_get_all
     open_connection('https://gov.blockscore.com')
 
     @conn.get do |req|
@@ -19,10 +19,9 @@ module HttpRequests
     end
   end
 
-  def asynch_get_specific(first_name, last_name)
-    JSON.parse(asynch_get_all.body)
-    .select do |person|
-          person["last_name"] == last_name && person["first_name"] == first_name
+  def timed_get_user(first_name, last_name)
+    JSON.parse(timed_get_all.body).select do |person|
+        person["last_name"] == last_name && person["first_name"] == first_name
     end
   end
 end
