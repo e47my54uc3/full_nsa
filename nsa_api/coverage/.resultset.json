@@ -177,17 +177,18 @@
       ],
       "/Users/admin/Desktop/Nsa_challenge/nsa_api/config/routes.rb": [
         1,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
         1,
-        1,
-        null,
         null,
         null,
         null,
         null,
         1,
-        null,
-        null,
-        null,
         1,
         null,
         null,
@@ -306,7 +307,7 @@
         2,
         2,
         null,
-        2,
+        1,
         null,
         null,
         1,
@@ -409,8 +410,8 @@
         5,
         5,
         null,
-        0,
-        0,
+        1,
+        1,
         null,
         null,
         null,
@@ -446,8 +447,8 @@
         1,
         1,
         1,
-        1,
-        1,
+        0,
+        0,
         null,
         null,
         null,
@@ -545,6 +546,6 @@
         null
       ]
     },
-    "timestamp": 1436849858
+    "timestamp": 1436858538
   }
 }
