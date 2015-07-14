@@ -1,8 +1,6 @@
 require 'rails_helper'
 require 'spec_helper'
 
-
-
 RSpec.describe GeoApiController, type: :controller do
 
     context "External gov.blockscore calls" do
@@ -27,19 +25,19 @@ RSpec.describe GeoApiController, type: :controller do
     context "Internal calls" do
       describe "get all internal user objects" do
         it "Checks that 100 objects are returned" do
-          VCR.use_cassette('controller/all_internal_data', :record => :new_episodes) do
+          VCR.use_cassette('controller/all_internal_data') do
             request = Net::HTTP.get_response('localhost', '/', 3000).body
-
-            binding.pry
             expect(JSON.parse(request)["geo_api"].length).to be(100)
-
           end
-
         end
 
+        it "Checks that the proper status is returned" do
+          VCR.use_cassette('controller/all_internal_data') do
+            request = Net::HTTP.new('localhost', 3000).get('/')
+            expect(request.code.to_i).to be_in([200, 408])
+          end
+        end
       end 
-
-
     end
 
 end
