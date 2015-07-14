@@ -1,0 +1,1638 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>API documentation</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+  <link type='text/css' rel='stylesheet' href='./apidoc/stylesheets/bundled/bootstrap.min.css'/>
+<link type='text/css' rel='stylesheet' href='./apidoc/stylesheets/bundled/prettify.css'/>
+<link type='text/css' rel='stylesheet' href='./apidoc/stylesheets/bundled/bootstrap-responsive.min.css'/>
+  <link type='text/css' rel='stylesheet' href='./apidoc/stylesheets/application.css'/>
+  <!-- IE6-8 support of HTML5 elements -->
+  <!--[if lt IE 9]>
+    <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+  <![endif]-->
+</head>
+<body>
+  <div class="container">
+    <div class="row">
+      <div id='container'>
+          <h4><a href='#geo_api'>Geo api</a></h4>
+  <ul>
+      <li><a href='#geo_api-index'>index</a></li>
+      <li><a href='#geo_api-show'>show</a></li>
+  </ul>
+
+
+
+<div>Another API description</div>
+
+<hr>
+
+
+  <ul class='breadcrumb'  id='geo_api'>
+    <li><a href='#'>NsaApi</a><span class='divider'>/</span></li>
+    <li class='active'>Geo api</li>
+  </ul>
+
+  <div class='page-header'>
+    <h1>
+      <a href='#geo_api'>Geo api</a><br>
+      <small></small>
+    </h1>
+  </div>
+
+
+  <div class='accordion' id='accordion'>
+
+      <hr>
+
+      <ul class='breadcrumb' id='geo_api-index'>
+        <li>
+          <a href='#'>NsaApi</a>
+          <span class='divider'>/</span>
+        </li>
+        <li>
+          <a href='#geo_api'>Geo api</a>
+          <span class='divider'>/</span>
+        </li>
+        <li class='active'>index</li>
+      </ul>
+
+      <div>
+          <h3>
+            <a href='#geo_api-index'>
+              GET /index
+            </a><br>
+            <small>List all user data provided by the NSA.</small>
+          </h3>
+      </div>
+
+      <div>
+        
+          <h2>Examples</h2>
+            <pre>GET /
+200
+{
+  &quot;geo_api&quot;: [
+    {
+      &quot;first_name&quot;: &quot;Rosamond&quot;,
+      &quot;last_name&quot;: &quot;Tromp&quot;,
+      &quot;phone_location&quot;: {
+        &quot;latitude&quot;: -50.055853307771045,
+        &quot;longitude&quot;: 127.38508015960667,
+        &quot;elevation&quot;: 24.07013849649814
+      },
+      &quot;stated_location&quot;: {
+        &quot;latitude&quot;: -81.71759900097544,
+        &quot;longitude&quot;: -11.608946960404722,
+        &quot;elevation&quot;: 8.377197204550269
+      }
+    },
+    {
+      &quot;first_name&quot;: &quot;Kristy&quot;,
+      &quot;last_name&quot;: &quot;Macejkovic&quot;,
+      &quot;phone_location&quot;: {
+        &quot;latitude&quot;: -36.91969799854894,
+        &quot;longitude&quot;: 81.55476539923416,
+        &quot;elevation&quot;: 1.6785630878437097
+      },
+      &quot;stated_location&quot;: {
+        &quot;latitude&quot;: 59.63775166544943,
+        &quot;longitude&quot;: 60.222625744606404,
+        &quot;elevation&quot;: 13.663102374262603
+      }
+    },
+    {
+      &quot;first_name&quot;: &quot;Morgan&quot;,
+      &quot;last_name&quot;: &quot;Ritchie&quot;,
+      &quot;phone_location&quot;: {
+        &quot;latitude&quot;: 47.641425816937556,
+        &quot;longitude&quot;: 18.598670786861902,
+        &quot;elevation&quot;: 20.59941982386322
+      },
+      &quot;stated_location&quot;: {
+        &quot;latitude&quot;: -27.667861676190014,
+        &quot;longitude&quot;: 63.44616144937129,
+        &quot;elevation&quot;: 6.851100564131308
+      }
+    },
+    {
+      &quot;first_name&quot;: &quot;Alisa&quot;,
+      &quot;last_name&quot;: &quot;Mosciski&quot;,
+      &quot;phone_location&quot;: {
+        &quot;latitude&quot;: -6.483957526623442,
+        &quot;longitude&quot;: 86.76606902831304,
+        &quot;elevation&quot;: 92.82874894178616
+      },
+      &quot;stated_location&quot;: {
+        &quot;latitude&quot;: -69.04766421703226,
+        &quot;longitude&quot;: -93.02735514923391,
+        &quot;elevation&quot;: 97.19111894841856
+      }
+    },
+    {
+      &quot;first_name&quot;: &quot;Stanley&quot;,
+      &quot;last_name&quot;: &quot;Block&quot;,
+      &quot;phone_location&quot;: {
+        &quot;latitude&quot;: -69.47490991542809,
+        &quot;longitude&quot;: -12.246262790917001,
+        &quot;elevation&quot;: 7.661071922801765
+      },
+      &quot;stated_location&quot;: {
+        &quot;latitude&quot;: 20.36557945408316,
+        &quot;longitude&quot;: 101.26039423659154,
+        &quot;elevation&quot;: 38.850883600677676
+      }
+    },
+    {
+      &quot;first_name&quot;: &quot;Alexis&quot;,
+      &quot;last_name&quot;: &quot;Cormier&quot;,
+      &quot;phone_location&quot;: {
+        &quot;latitude&quot;: -43.52467137748427,
+        &quot;longitude&quot;: 162.6451776507064,
+        &quot;elevation&quot;: 97.20413772552176
+      },
+      &quot;stated_location&quot;: {
+        &quot;latitude&quot;: -48.42220112070407,
+        &quot;longitude&quot;: 140.69690515156606,
+        &quot;elevation&quot;: 46.21589316737279
+      }
+    },
+    {
+      &quot;first_name&quot;: &quot;Kimberly&quot;,
+      &quot;last_name&quot;: &quot;Abernathy&quot;,
+      &quot;phone_location&quot;: {
+        &quot;latitude&quot;: -17.369533009337232,
+        &quot;longitude&quot;: -168.19465046006988,
+        &quot;elevation&quot;: 46.55543227138138
+      },
+      &quot;stated_location&quot;: {
+        &quot;latitude&quot;: -58.82510923598494,
+        &quot;longitude&quot;: 74.57895733869836,
+        &quot;elevation&quot;: 82.80107022762438
+      }
+    },
+    {
+      &quot;first_name&quot;: &quot;Karelle&quot;,
+      &quot;last_name&quot;: &quot;Schumm&quot;,
+      &quot;phone_location&quot;: {
+        &quot;latitude&quot;: 0.44280457918185334,
+        &quot;longitude&quot;: -5.884116707917997,
+        &quot;elevation&quot;: 42.88586278247642
+      },
+      &quot;stated_location&quot;: {
+        &quot;latitude&quot;: -89.29108428508889,
+        &quot;longitude&quot;: 27.39822827503022,
+        &quot;elevation&quot;: 97.86879684193106
+      }
+    },
+    {
+      &quot;first_name&quot;: &quot;Rickey&quot;,
+      &quot;last_name&quot;: &quot;Macejkovic&quot;,
+      &quot;phone_location&quot;: {
+        &quot;latitude&quot;: 56.761104899687695,
+        &quot;longitude&quot;: -170.2571657048083,
+        &quot;elevation&quot;: 81.29599716722596
+      },
+      &quot;stated_location&quot;: {
+        &quot;latitude&quot;: 25.281957623385523,
+        &quot;longitude&quot;: -2.64104989022303,
+        &quot;elevation&quot;: 91.82856210721715
+      }
+    },
+    {
+      &quot;first_name&quot;: &quot;Geoffrey&quot;,
+      &quot;last_name&quot;: &quot;Schulist&quot;,
+      &quot;phone_location&quot;: {
+        &quot;latitude&quot;: 26.89595402433433,
+        &quot;longitude&quot;: -0.16738051635815054,
+        &quot;elevation&quot;: 80.08086421082702
+      },
+      &quot;stated_location&quot;: {
+        &quot;latitude&quot;: 1.4754742158438887,
+        &quot;longitude&quot;: 20.64690560503945,
+        &quot;elevation&quot;: 26.224847119925233
+      }
+    },
+    {
+      &quot;first_name&quot;: &quot;Camille&quot;,
+      &quot;last_name&quot;: &quot;Windler&quot;,
+      &quot;phone_location&quot;: {
+        &quot;latitude&quot;: -3.358818699462077,
+        &quot;longitude&quot;: 38.492921594645566,
+        &quot;elevation&quot;: 50.78916048809514
+      },
+      &quot;stated_location&quot;: {
+        &quot;latitude&quot;: -83.6101438833026,
+        &quot;longitude&quot;: 153.16178366875727,
+        &quot;elevation&quot;: 22.09348339254943
+      }
+    },
+    {
+      &quot;first_name&quot;: &quot;Lilly&quot;,
+      &quot;last_name&quot;: &quot;Dietrich&quot;,
+      &quot;phone_location&quot;: {
+        &quot;latitude&quot;: -70.23582032457381,
+        &quot;longitude&quot;: 163.73814512561273,
+        &quot;elevation&quot;: 71.29161243794006
+      },
+      &quot;stated_location&quot;: {
+        &quot;latitude&quot;: 35.118005999380244,
+        &quot;longitude&quot;: 25.787794353626026,
+        &quot;elevation&quot;: 51.400974131599185
+      }
+    },
+    {
+      &quot;first_name&quot;: &quot;Kellie&quot;,
+      &quot;last_name&quot;: &quot;Stoltenberg&quot;,
+      &quot;phone_location&quot;: {
+        &quot;latitude&quot;: -56.94306345686149,
+        &quot;longitude&quot;: -139.96156578482405,
+        &quot;elevation&quot;: 12.577100647977025
+      },
+      &quot;stated_location&quot;: {
+        &quot;latitude&quot;: 73.57771741068936,
+        &quot;longitude&quot;: 81.62022448071144,
+        &quot;elevation&quot;: 31.499934197384704
+      }
+    },
+    {
+      &quot;first_name&quot;: &quot;Sonya&quot;,
+      &quot;last_name&quot;: &quot;Tremblay&quot;,
+      &quot;phone_location&quot;: {
+        &quot;latitude&quot;: -82.36942810946684,
+        &quot;longitude&quot;: 66.37597462035455,
+        &quot;elevation&quot;: 27.583648042517517
+      },
+      &quot;stated_location&quot;: {
+        &quot;latitude&quot;: 49.03391647712556,
+        &quot;longitude&quot;: 75.55402414130137,
+        &quot;elevation&quot;: 12.569222260833046
+      }
+    },
+    {
+      &quot;first_name&quot;: &quot;Corrine&quot;,
+      &quot;last_name&quot;: &quot;King&quot;,
+      &quot;phone_location&quot;: {
+        &quot;latitude&quot;: 18.982452504279806,
+        &quot;longitude&quot;: -101.39182623410697,
+        &quot;elevation&quot;: 49.87756752687068
+      },
+      &quot;stated_location&quot;: {
+        &quot;latitude&quot;: -0.4856732752289048,
+        &quot;longitude&quot;: -51.31765873366575,
+        &quot;elevation&quot;: 46.41564878524213
+      }
+    },
+    {
+      &quot;first_name&quot;: &quot;Elyssa&quot;,
+      &quot;last_name&quot;: &quot;Schumm&quot;,
+      &quot;phone_location&quot;: {
+        &quot;latitude&quot;: 14.22937006320575,
+        &quot;longitude&quot;: -34.003063780310214,
+        &quot;elevation&quot;: 73.92669749321072
+      },
+      &quot;stated_location&quot;: {
+        &quot;latitude&quot;: 50.39402801650357,
+        &quot;longitude&quot;: -149.04658732910588,
+        &quot;elevation&quot;: 77.33431071637833
+      }
+    },
+    {
+      &quot;first_name&quot;: &quot;April&quot;,
+      &quot;last_name&quot;: &quot;Muller&quot;,
+      &quot;phone_location&quot;: {
+        &quot;latitude&quot;: -44.585113487235645,
+        &quot;longitude&quot;: 133.96638589279166,
+        &quot;elevation&quot;: 95.15321245758244
+      },
+      &quot;stated_location&quot;: {
+        &quot;latitude&quot;: 0.7775340483976123,
+        &quot;longitude&quot;: -62.452187593210596,
+        &quot;elevation&quot;: 8.370640687645391
+      }
+    },
+    {
+      &quot;first_name&quot;: &quot;Maybelle&quot;,
+      &quot;last_name&quot;: &quot;Sporer&quot;,
+      &quot;phone_location&quot;: {
+        &quot;latitude&quot;: 42.44590824813315,
+        &quot;longitude&quot;: -37.37768880195131,
+        &quot;elevation&quot;: 76.68667552100216
+      },
+      &quot;stated_location&quot;: {
+        &quot;latitude&quot;: -66.4176888803367,
+        &quot;longitude&quot;: -166.50064341558905,
+        &quot;elevation&quot;: 83.03137310129695
+      }
+    },
+    {
+      &quot;first_name&quot;: &quot;Kiley&quot;,
+      &quot;last_name&quot;: &quot;Wyman&quot;,
+      &quot;phone_location&quot;: {
+        &quot;latitude&quot;: -86.47096665358937,
+        &quot;longitude&quot;: -44.722608082791055,
+        &quot;elevation&quot;: 82.78243836290453
+      },
+      &quot;stated_location&quot;: {
+        &quot;latitude&quot;: 8.147238042300401,
+        &quot;longitude&quot;: 102.42987164619768,
+        &quot;elevation&quot;: 95.42175859166022
+      }
+    },
+    {
+      &quot;first_name&quot;: &quot;Celestine&quot;,
+      &quot;last_name&quot;: &quot;Sanford&quot;,
+      &quot;phone_location&quot;: {
+        &quot;latitude&quot;: -52.940206381503344,
+        &quot;longitude&quot;: -60.44138246458924,
+        &quot;elevation&quot;: 54.696483889399815
+      },
+      &quot;stated_location&quot;: {
+        &quot;latitude&quot;: -40.022907575737605,
+        &quot;longitude&quot;: -147.31959285008458,
+        &quot;elevation&quot;: 31.180704298789685
+      }
+    },
+    {
+      &quot;first_name&quot;: &quot;Kaley&quot;,
+      &quot;last_name&quot;: &quot;Bernhard&quot;,
+      &quot;phone_location&quot;: {
+        &quot;latitude&quot;: 48.86448752230302,
+        &quot;longitude&quot;: -62.33674012365182,
+        &quot;elevation&quot;: 67.26535785189414
+      },
+      &quot;stated_location&quot;: {
+        &quot;latitude&quot;: -18.218705519348973,
+        &quot;longitude&quot;: 173.85700450460683,
+        &quot;elevation&quot;: 24.692970156844652
+      }
+    },
+    {
+      &quot;first_name&quot;: &quot;Khalil&quot;,
+      &quot;last_name&quot;: &quot;Bartell&quot;,
+      &quot;phone_location&quot;: {
+        &quot;latitude&quot;: 59.781603244069146,
+        &quot;longitude&quot;: 106.11359117961905,
+        &quot;elevation&quot;: 89.81971712930813
+      },
+      &quot;stated_location&quot;: {
+        &quot;latitude&quot;: -28.804919378578077,
+        &quot;longitude&quot;: 20.92329519841573,
+        &quot;elevation&quot;: 73.02799858374193
+      }
+    },
+    {
+      &quot;first_name&quot;: &quot;Abdullah&quot;,
+      &quot;last_name&quot;: &quot;Blick&quot;,
+      &quot;phone_location&quot;: {
+        &quot;latitude&quot;: -42.021577285308005,
+        &quot;longitude&quot;: 54.997950212699976,
+        &quot;elevation&quot;: 4.455840710525849
+      },
+      &quot;stated_location&quot;: {
+        &quot;latitude&quot;: 87.61755817887416,
+        &quot;longitude&quot;: 24.952732438485896,
+        &quot;elevation&quot;: 36.97739172313979
+      }
+    },
+    {
+      &quot;first_name&quot;: &quot;Murray&quot;,
+      &quot;last_name&quot;: &quot;Hansen&quot;,
+      &quot;phone_location&quot;: {
+        &quot;latitude&quot;: 57.66773608519864,
+        &quot;longitude&quot;: 166.83689545083416,
+        &quot;elevation&quot;: 10.225286833444635
+      },
+      &quot;stated_location&quot;: {
+        &quot;latitude&quot;: -77.93595516384353,
+        &quot;longitude&quot;: 154.27391466144144,
+        &quot;elevation&quot;: 16.85885619057368
+      }
+    },
+    {
+      &quot;first_name&quot;: &quot;Lia&quot;,
+      &quot;last_name&quot;: &quot;Lind&quot;,
+      &quot;phone_location&quot;: {
+        &quot;latitude&quot;: -24.070629745936472,
+        &quot;longitude&quot;: -61.923115765409094,
+        &quot;elevation&quot;: 58.720401461025105
+      },
+      &quot;stated_location&quot;: {
+        &quot;latitude&quot;: 0.9447644951784326,
+        &quot;longitude&quot;: -34.43413132204148,
+        &quot;elevation&quot;: 93.30542231558299
+      }
+    },
+    {
+      &quot;first_name&quot;: &quot;Kimberly&quot;,
+      &quot;last_name&quot;: &quot;Kunde&quot;,
+      &quot;phone_location&quot;: {
+        &quot;latitude&quot;: 0.4669576073167008,
+        &quot;longitude&quot;: -28.47613676628805,
+        &quot;elevation&quot;: 39.426217734521494
+      },
+      &quot;stated_location&quot;: {
+        &quot;latitude&quot;: -5.414774539617483,
+        &quot;longitude&quot;: -20.14602158919837,
+        &quot;elevation&quot;: 9.540217970801578
+      }
+    },
+    {
+      &quot;first_name&quot;: &quot;Orpha&quot;,
+      &quot;last_name&quot;: &quot;Wolf&quot;,
+      &quot;phone_location&quot;: {
+        &quot;latitude&quot;: 51.309952575748696,
+        &quot;longitude&quot;: 177.04381665996289,
+        &quot;elevation&quot;: 3.828122582728466
+      },
+      &quot;stated_location&quot;: {
+        &quot;latitude&quot;: 60.99351181384739,
+        &quot;longitude&quot;: 46.01125410394576,
+        &quot;elevation&quot;: 46.85854779984218
+      }
+    },
+    {
+      &quot;first_name&quot;: &quot;Antone&quot;,
+      &quot;last_name&quot;: &quot;Aufderhar&quot;,
+      &quot;phone_location&quot;: {
+        &quot;latitude&quot;: -73.93436802615265,
+        &quot;longitude&quot;: 131.69632655936738,
+        &quot;elevation&quot;: 35.90507770281356
+      },
+      &quot;stated_location&quot;: {
+        &quot;latitude&quot;: -76.08819016816489,
+        &quot;longitude&quot;: 163.9588791164627,
+        &quot;elevation&quot;: 59.12274767664223
+      }
+    },
+    {
+      &quot;first_name&quot;: &quot;Johan&quot;,
+      &quot;last_name&quot;: &quot;Goodwin&quot;,
+      &quot;phone_location&quot;: {
+        &quot;latitude&quot;: -86.44364383512657,
+        &quot;longitude&quot;: -132.72814557583965,
+        &quot;elevation&quot;: 44.221547361765715
+      },
+      &quot;stated_location&quot;: {
+        &quot;latitude&quot;: -67.16617846669297,
+        &quot;longitude&quot;: 108.96153763688739,
+        &quot;elevation&quot;: 86.0823792642596
+      }
+    },
+    {
+      &quot;first_name&quot;: &quot;Scot&quot;,
+      &quot;last_name&quot;: &quot;Kemmer&quot;,
+      &quot;phone_location&quot;: {
+        &quot;latitude&quot;: 16.372241614888452,
+        &quot;longitude&quot;: 163.9523763972757,
+        &quot;elevation&quot;: 5.849351265290592
+      },
+      &quot;stated_location&quot;: {
+        &quot;latitude&quot;: 56.70477370780864,
+        &quot;longitude&quot;: 136.6804813511111,
+        &quot;elevation&quot;: 86.50796806230345
+      }
+    },
+    {
+      &quot;first_name&quot;: &quot;Jean&quot;,
+      &quot;last_name&quot;: &quot;Reichel&quot;,
+      &quot;phone_location&quot;: {
+        &quot;latitude&quot;: -48.07133105235698,
+        &quot;longitude&quot;: 101.54309690632363,
+        &quot;elevation&quot;: 52.76434595444678
+      },
+      &quot;stated_location&quot;: {
+        &quot;latitude&quot;: -71.02044395094886,
+        &quot;longitude&quot;: -23.840059530224522,
+        &quot;elevation&quot;: 40.94229612009714
+      }
+    },
+    {
+      &quot;first_name&quot;: &quot;Ellen&quot;,
+      &quot;last_name&quot;: &quot;Mueller&quot;,
+      &quot;phone_location&quot;: {
+        &quot;latitude&quot;: -11.80308722973254,
+        &quot;longitude&quot;: 118.68231319261696,
+        &quot;elevation&quot;: 6.0718285796656835
+      },
+      &quot;stated_location&quot;: {
+        &quot;latitude&quot;: -15.628618252356233,
+        &quot;longitude&quot;: 124.12488782602077,
+        &quot;elevation&quot;: 69.6451645326365
+      }
+    },
+    {
+      &quot;first_name&quot;: &quot;Porter&quot;,
+      &quot;last_name&quot;: &quot;Medhurst&quot;,
+      &quot;phone_location&quot;: {
+        &quot;latitude&quot;: -64.85062454410931,
+        &quot;longitude&quot;: -159.65325193278147,
+        &quot;elevation&quot;: 8.988210826759413
+      },
+      &quot;stated_location&quot;: {
+        &quot;latitude&quot;: 19.091029446849035,
+        &quot;longitude&quot;: 30.80457797021282,
+        &quot;elevation&quot;: 28.931475710352707
+      }
+    },
+    {
+      &quot;first_name&quot;: &quot;Aniya&quot;,
+      &quot;last_name&quot;: &quot;Hammes&quot;,
+      &quot;phone_location&quot;: {
+        &quot;latitude&quot;: -40.526720807972616,
+        &quot;longitude&quot;: 21.312560652548484,
+        &quot;elevation&quot;: 5.4296266543294225
+      },
+      &quot;stated_location&quot;: {
+        &quot;latitude&quot;: 10.422438309969053,
+        &quot;longitude&quot;: 74.63794298090755,
+        &quot;elevation&quot;: 87.35689249751455
+      }
+    },
+    {
+      &quot;first_name&quot;: &quot;Kieran&quot;,
+      &quot;last_name&quot;: &quot;Kilback&quot;,
+      &quot;phone_location&quot;: {
+        &quot;latitude&quot;: -41.36312277506227,
+        &quot;longitude&quot;: 113.50031251734657,
+        &quot;elevation&quot;: 39.31778693682335
+      },
+      &quot;stated_location&quot;: {
+        &quot;latitude&quot;: 62.7607600686934,
+        &quot;longitude&quot;: 51.78572977091534,
+        &quot;elevation&quot;: 37.11415264394201
+      }
+    },
+    {
+      &quot;first_name&quot;: &quot;Lulu&quot;,
+      &quot;last_name&quot;: &quot;Sawayn&quot;,
+      &quot;phone_location&quot;: {
+        &quot;latitude&quot;: -35.25059081221271,
+        &quot;longitude&quot;: 54.92029833898954,
+        &quot;elevation&quot;: 91.07734471846982
+      },
+      &quot;stated_location&quot;: {
+        &quot;latitude&quot;: 73.54092287990261,
+        &quot;longitude&quot;: 150.08417157993853,
+        &quot;elevation&quot;: 92.63386591845108
+      }
+    },
+    {
+      &quot;first_name&quot;: &quot;Concepcion&quot;,
+      &quot;last_name&quot;: &quot;Bartoletti&quot;,
+      &quot;phone_location&quot;: {
+        &quot;latitude&quot;: -54.150096869260786,
+        &quot;longitude&quot;: -19.779152320796925,
+        &quot;elevation&quot;: 82.86138238697073
+      },
+      &quot;stated_location&quot;: {
+        &quot;latitude&quot;: 51.88650595708063,
+        &quot;longitude&quot;: -31.841619118639585,
+        &quot;elevation&quot;: 36.74185586365667
+      }
+    },
+    {
+      &quot;first_name&quot;: &quot;Fern&quot;,
+      &quot;last_name&quot;: &quot;Lang&quot;,
+      &quot;phone_location&quot;: {
+        &quot;latitude&quot;: 56.623440434447076,
+        &quot;longitude&quot;: -4.779804003808437,
+        &quot;elevation&quot;: 88.87774749442575
+      },
+      &quot;stated_location&quot;: {
+        &quot;latitude&quot;: -23.16690017478686,
+        &quot;longitude&quot;: 47.17222229586591,
+        &quot;elevation&quot;: 57.11796647118212
+      }
+    },
+    {
+      &quot;first_name&quot;: &quot;Aisha&quot;,
+      &quot;last_name&quot;: &quot;Simonis&quot;,
+      &quot;phone_location&quot;: {
+        &quot;latitude&quot;: 55.58929482948835,
+        &quot;longitude&quot;: 46.719669456197835,
+        &quot;elevation&quot;: 31.3089765614976
+      },
+      &quot;stated_location&quot;: {
+        &quot;latitude&quot;: 38.225690885719985,
+        &quot;longitude&quot;: -29.47095743740769,
+        &quot;elevation&quot;: 63.33437501444161
+      }
+    },
+    {
+      &quot;first_name&quot;: &quot;Trevion&quot;,
+      &quot;last_name&quot;: &quot;Koelpin&quot;,
+      &quot;phone_location&quot;: {
+        &quot;latitude&quot;: -53.348690494196035,
+        &quot;longitude&quot;: 130.76675210134374,
+        &quot;elevation&quot;: 19.863528083175254
+      },
+      &quot;stated_location&quot;: {
+        &quot;latitude&quot;: 51.69885661620984,
+        &quot;longitude&quot;: 110.22560064437573,
+        &quot;elevation&quot;: 2.7378338911519084
+      }
+    },
+    {
+      &quot;first_name&quot;: &quot;Earnestine&quot;,
+      &quot;last_name&quot;: &quot;Kuhn&quot;,
+      &quot;phone_location&quot;: {
+        &quot;latitude&quot;: -21.4883012054313,
+        &quot;longitude&quot;: -64.86615817241481,
+        &quot;elevation&quot;: 98.12123383509123
+      },
+      &quot;stated_location&quot;: {
+        &quot;latitude&quot;: 69.59311595521595,
+        &quot;longitude&quot;: -171.1865720271683,
+        &quot;elevation&quot;: 63.265007882407374
+      }
+    },
+    {
+      &quot;first_name&quot;: &quot;Graciela&quot;,
+      &quot;last_name&quot;: &quot;Gleichner&quot;,
+      &quot;phone_location&quot;: {
+        &quot;latitude&quot;: -18.917585390674944,
+        &quot;longitude&quot;: -2.00339153677038,
+        &quot;elevation&quot;: 50.88750673698351
+      },
+      &quot;stated_location&quot;: {
+        &quot;latitude&quot;: 30.611556266504536,
+        &quot;longitude&quot;: -92.9137462260564,
+        &quot;elevation&quot;: 70.34853392233329
+      }
+    },
+    {
+      &quot;first_name&quot;: &quot;Carolyn&quot;,
+      &quot;last_name&quot;: &quot;Schimmel&quot;,
+      &quot;phone_location&quot;: {
+        &quot;latitude&quot;: -26.355000132526982,
+        &quot;longitude&quot;: -26.337109728905602,
+        &quot;elevation&quot;: 73.61219615206488
+      },
+      &quot;stated_location&quot;: {
+        &quot;latitude&quot;: -64.95710246582863,
+        &quot;longitude&quot;: -168.66886547251409,
+        &quot;elevation&quot;: 45.63823086226323
+      }
+    },
+    {
+      &quot;first_name&quot;: &quot;Orin&quot;,
+      &quot;last_name&quot;: &quot;Keebler&quot;,
+      &quot;phone_location&quot;: {
+        &quot;latitude&quot;: -61.36687668854578,
+        &quot;longitude&quot;: 72.23766807182147,
+        &quot;elevation&quot;: 56.9199185363299
+      },
+      &quot;stated_location&quot;: {
+        &quot;latitude&quot;: 2.9034615684297336,
+        &quot;longitude&quot;: 36.647912952578366,
+        &quot;elevation&quot;: 98.44582611980083
+      }
+    },
+    {
+      &quot;first_name&quot;: &quot;Cordelia&quot;,
+      &quot;last_name&quot;: &quot;Jast&quot;,
+      &quot;phone_location&quot;: {
+        &quot;latitude&quot;: 49.690899402517516,
+        &quot;longitude&quot;: -152.0567099279742,
+        &quot;elevation&quot;: 48.338118921241914
+      },
+      &quot;stated_location&quot;: {
+        &quot;latitude&quot;: 66.20857317073072,
+        &quot;longitude&quot;: 44.863946450245834,
+        &quot;elevation&quot;: 78.4401868588144
+      }
+    },
+    {
+      &quot;first_name&quot;: &quot;Melisa&quot;,
+      &quot;last_name&quot;: &quot;Torp&quot;,
+      &quot;phone_location&quot;: {
+        &quot;latitude&quot;: -36.399247006308435,
+        &quot;longitude&quot;: 68.48723170259478,
+        &quot;elevation&quot;: 62.10027256105035
+      },
+      &quot;stated_location&quot;: {
+        &quot;latitude&quot;: -50.57317975455018,
+        &quot;longitude&quot;: 118.05001419490713,
+        &quot;elevation&quot;: 44.685951225937394
+      }
+    },
+    {
+      &quot;first_name&quot;: &quot;Henriette&quot;,
+      &quot;last_name&quot;: &quot;Marquardt&quot;,
+      &quot;phone_location&quot;: {
+        &quot;latitude&quot;: -11.157487344456854,
+        &quot;longitude&quot;: 71.97079979788444,
+        &quot;elevation&quot;: 4.564790687336906
+      },
+      &quot;stated_location&quot;: {
+        &quot;latitude&quot;: -65.22145266518426,
+        &quot;longitude&quot;: -105.11531160686648,
+        &quot;elevation&quot;: 52.22382695934027
+      }
+    },
+    {
+      &quot;first_name&quot;: &quot;Brant&quot;,
+      &quot;last_name&quot;: &quot;Nienow&quot;,
+      &quot;phone_location&quot;: {
+        &quot;latitude&quot;: 87.18023756914684,
+        &quot;longitude&quot;: 135.5629302703254,
+        &quot;elevation&quot;: 80.6116235117193
+      },
+      &quot;stated_location&quot;: {
+        &quot;latitude&quot;: -44.054587259791454,
+        &quot;longitude&quot;: -33.97648141787272,
+        &quot;elevation&quot;: 7.865884384995548
+      }
+    },
+    {
+      &quot;first_name&quot;: &quot;Edwardo&quot;,
+      &quot;last_name&quot;: &quot;Rath&quot;,
+      &quot;phone_location&quot;: {
+        &quot;latitude&quot;: -33.11582998829897,
+        &quot;longitude&quot;: 15.056422677094133,
+        &quot;elevation&quot;: 21.31197029817786
+      },
+      &quot;stated_location&quot;: {
+        &quot;latitude&quot;: -29.727723895833662,
+        &quot;longitude&quot;: -54.20441160421798,
+        &quot;elevation&quot;: 2.1034621506366036
+      }
+    },
+    {
+      &quot;first_name&quot;: &quot;Alfreda&quot;,
+      &quot;last_name&quot;: &quot;Goodwin&quot;,
+      &quot;phone_location&quot;: {
+        &quot;latitude&quot;: -21.709231763494245,
+        &quot;longitude&quot;: -39.120354908837555,
+        &quot;elevation&quot;: 87.82563666290395
+      },
+      &quot;stated_location&quot;: {
+        &quot;latitude&quot;: -42.07728177060734,
+        &quot;longitude&quot;: -50.13872407167389,
+        &quot;elevation&quot;: 92.0192876064316
+      }
+    },
+    {
+      &quot;first_name&quot;: &quot;Dawn&quot;,
+      &quot;last_name&quot;: &quot;Swaniawski&quot;,
+      &quot;phone_location&quot;: {
+        &quot;latitude&quot;: 16.466100332842515,
+        &quot;longitude&quot;: -162.9565949660799,
+        &quot;elevation&quot;: 29.396647577782975
+      },
+      &quot;stated_location&quot;: {
+        &quot;latitude&quot;: 12.878156879930998,
+        &quot;longitude&quot;: 88.70810066103888,
+        &quot;elevation&quot;: 8.618707355055044
+      }
+    },
+    {
+      &quot;first_name&quot;: &quot;Randy&quot;,
+      &quot;last_name&quot;: &quot;Weimann&quot;,
+      &quot;phone_location&quot;: {
+        &quot;latitude&quot;: 64.17037532065413,
+        &quot;longitude&quot;: -37.510412765424604,
+        &quot;elevation&quot;: 74.15278417957268
+      },
+      &quot;stated_location&quot;: {
+        &quot;latitude&quot;: 58.01047972007672,
+        &quot;longitude&quot;: 126.69135318248703,
+        &quot;elevation&quot;: 81.5935249163085
+      }
+    },
+    {
+      &quot;first_name&quot;: &quot;Fidel&quot;,
+      &quot;last_name&quot;: &quot;Price&quot;,
+      &quot;phone_location&quot;: {
+        &quot;latitude&quot;: 89.7237436610871,
+        &quot;longitude&quot;: 62.98660522441446,
+        &quot;elevation&quot;: 13.892967921942267
+      },
+      &quot;stated_location&quot;: {
+        &quot;latitude&quot;: -19.61083219060997,
+        &quot;longitude&quot;: -94.14758516659069,
+        &quot;elevation&quot;: 72.70364872021587
+      }
+    },
+    {
+      &quot;first_name&quot;: &quot;Miller&quot;,
+      &quot;last_name&quot;: &quot;Hills&quot;,
+      &quot;phone_location&quot;: {
+        &quot;latitude&quot;: -74.86438901349102,
+        &quot;longitude&quot;: -158.82057388105525,
+        &quot;elevation&quot;: 8.44753540769302
+      },
+      &quot;stated_location&quot;: {
+        &quot;latitude&quot;: -41.55424021332244,
+        &quot;longitude&quot;: 18.660551042740252,
+        &quot;elevation&quot;: 73.21257666047657
+      }
+    },
+    {
+      &quot;first_name&quot;: &quot;Kayden&quot;,
+      &quot;last_name&quot;: &quot;Berge&quot;,
+      &quot;phone_location&quot;: {
+        &quot;latitude&quot;: 32.35853904759183,
+        &quot;longitude&quot;: 119.31161754954661,
+        &quot;elevation&quot;: 56.17596966419488
+      },
+      &quot;stated_location&quot;: {
+        &quot;latitude&quot;: -20.584620134746245,
+        &quot;longitude&quot;: 166.68885139688138,
+        &quot;elevation&quot;: 95.78307782571824
+      }
+    },
+    {
+      &quot;first_name&quot;: &quot;Reese&quot;,
+      &quot;last_name&quot;: &quot;Mohr&quot;,
+      &quot;phone_location&quot;: {
+        &quot;latitude&quot;: -82.14268309049095,
+        &quot;longitude&quot;: -48.424072885888904,
+        &quot;elevation&quot;: 52.57162661540325
+      },
+      &quot;stated_location&quot;: {
+        &quot;latitude&quot;: -66.06120025272224,
+        &quot;longitude&quot;: -47.794138078292406,
+        &quot;elevation&quot;: 2.8095278071458507
+      }
+    },
+    {
+      &quot;first_name&quot;: &quot;Edgar&quot;,
+      &quot;last_name&quot;: &quot;Reichel&quot;,
+      &quot;phone_location&quot;: {
+        &quot;latitude&quot;: -21.735912526474422,
+        &quot;longitude&quot;: -33.58304737589032,
+        &quot;elevation&quot;: 70.41924746648064
+      },
+      &quot;stated_location&quot;: {
+        &quot;latitude&quot;: 76.58599392608176,
+        &quot;longitude&quot;: -37.543480534957695,
+        &quot;elevation&quot;: 1.475981309842267
+      }
+    },
+    {
+      &quot;first_name&quot;: &quot;Florine&quot;,
+      &quot;last_name&quot;: &quot;Flatley&quot;,
+      &quot;phone_location&quot;: {
+        &quot;latitude&quot;: -70.01161985674453,
+        &quot;longitude&quot;: 87.65747610795927,
+        &quot;elevation&quot;: 87.21105752450346
+      },
+      &quot;stated_location&quot;: {
+        &quot;latitude&quot;: 10.012723131405394,
+        &quot;longitude&quot;: -25.08806678482796,
+        &quot;elevation&quot;: 82.17785832264815
+      }
+    },
+    {
+      &quot;first_name&quot;: &quot;Albertha&quot;,
+      &quot;last_name&quot;: &quot;MacGyver&quot;,
+      &quot;phone_location&quot;: {
+        &quot;latitude&quot;: 18.483745493219814,
+        &quot;longitude&quot;: 158.86054566146447,
+        &quot;elevation&quot;: 39.26321373095259
+      },
+      &quot;stated_location&quot;: {
+        &quot;latitude&quot;: 40.61557319328807,
+        &quot;longitude&quot;: 45.924463741320125,
+        &quot;elevation&quot;: 37.58691871562505
+      }
+    },
+    {
+      &quot;first_name&quot;: &quot;Ulises&quot;,
+      &quot;last_name&quot;: &quot;Zieme&quot;,
+      &quot;phone_location&quot;: {
+        &quot;latitude&quot;: -1.1397099236283879,
+        &quot;longitude&quot;: 95.5857167098178,
+        &quot;elevation&quot;: 1.836216797931578
+      },
+      &quot;stated_location&quot;: {
+        &quot;latitude&quot;: 2.3294087361904587,
+        &quot;longitude&quot;: -156.49736515189474,
+        &quot;elevation&quot;: 85.18363156425534
+      }
+    },
+    {
+      &quot;first_name&quot;: &quot;Maurice&quot;,
+      &quot;last_name&quot;: &quot;Harvey&quot;,
+      &quot;phone_location&quot;: {
+        &quot;latitude&quot;: -17.59465135471524,
+        &quot;longitude&quot;: -174.98211543411296,
+        &quot;elevation&quot;: 36.739587168984976
+      },
+      &quot;stated_location&quot;: {
+        &quot;latitude&quot;: 59.38691905511746,
+        &quot;longitude&quot;: 24.759793420594434,
+        &quot;elevation&quot;: 70.53412286259625
+      }
+    },
+    {
+      &quot;first_name&quot;: &quot;Carlo&quot;,
+      &quot;last_name&quot;: &quot;Bayer&quot;,
+      &quot;phone_location&quot;: {
+        &quot;latitude&quot;: -84.07983988272605,
+        &quot;longitude&quot;: -173.29146202940564,
+        &quot;elevation&quot;: 76.61976241813805
+      },
+      &quot;stated_location&quot;: {
+        &quot;latitude&quot;: 62.84574470806973,
+        &quot;longitude&quot;: 2.1683398369540328,
+        &quot;elevation&quot;: 14.854244691105766
+      }
+    },
+    {
+      &quot;first_name&quot;: &quot;Favian&quot;,
+      &quot;last_name&quot;: &quot;Beier&quot;,
+      &quot;phone_location&quot;: {
+        &quot;latitude&quot;: 42.46633840911855,
+        &quot;longitude&quot;: -104.13050952772421,
+        &quot;elevation&quot;: 26.537121030261346
+      },
+      &quot;stated_location&quot;: {
+        &quot;latitude&quot;: 88.11880060092597,
+        &quot;longitude&quot;: -47.61791605985289,
+        &quot;elevation&quot;: 52.63194089699389
+      }
+    },
+    {
+      &quot;first_name&quot;: &quot;Aubree&quot;,
+      &quot;last_name&quot;: &quot;Kris&quot;,
+      &quot;phone_location&quot;: {
+        &quot;latitude&quot;: 85.55181173348893,
+        &quot;longitude&quot;: -37.884078320071296,
+        &quot;elevation&quot;: 44.58902509986235
+      },
+      &quot;stated_location&quot;: {
+        &quot;latitude&quot;: 68.56524818147469,
+        &quot;longitude&quot;: 52.33308453722097,
+        &quot;elevation&quot;: 53.525086732885484
+      }
+    },
+    {
+      &quot;first_name&quot;: &quot;Monroe&quot;,
+      &quot;last_name&quot;: &quot;Mitchell&quot;,
+      &quot;phone_location&quot;: {
+        &quot;latitude&quot;: 62.38436675402912,
+        &quot;longitude&quot;: -76.28297778934308,
+        &quot;elevation&quot;: 42.53167848538476
+      },
+      &quot;stated_location&quot;: {
+        &quot;latitude&quot;: 7.392971084630517,
+        &quot;longitude&quot;: 49.4138742527538,
+        &quot;elevation&quot;: 5.705257894661264
+      }
+    },
+    {
+      &quot;first_name&quot;: &quot;Aaliyah&quot;,
+      &quot;last_name&quot;: &quot;Schulist&quot;,
+      &quot;phone_location&quot;: {
+        &quot;latitude&quot;: -21.11474455685058,
+        &quot;longitude&quot;: 130.62089095437966,
+        &quot;elevation&quot;: 84.14746991693005
+      },
+      &quot;stated_location&quot;: {
+        &quot;latitude&quot;: -78.3323041315862,
+        &quot;longitude&quot;: -30.065895246458922,
+        &quot;elevation&quot;: 66.52288482913109
+      }
+    },
+    {
+      &quot;first_name&quot;: &quot;Kaylie&quot;,
+      &quot;last_name&quot;: &quot;Lang&quot;,
+      &quot;phone_location&quot;: {
+        &quot;latitude&quot;: -74.56517726437977,
+        &quot;longitude&quot;: 128.4552035457915,
+        &quot;elevation&quot;: 90.41226254585372
+      },
+      &quot;stated_location&quot;: {
+        &quot;latitude&quot;: 23.641959593343543,
+        &quot;longitude&quot;: 39.90074122660485,
+        &quot;elevation&quot;: 86.55840394948365
+      }
+    },
+    {
+      &quot;first_name&quot;: &quot;Branson&quot;,
+      &quot;last_name&quot;: &quot;Orn&quot;,
+      &quot;phone_location&quot;: {
+        &quot;latitude&quot;: 70.6300007097714,
+        &quot;longitude&quot;: 95.47936541976901,
+        &quot;elevation&quot;: 91.5102019775379
+      },
+      &quot;stated_location&quot;: {
+        &quot;latitude&quot;: -43.1720013541322,
+        &quot;longitude&quot;: -110.93285523330306,
+        &quot;elevation&quot;: 89.49594991510675
+      }
+    },
+    {
+      &quot;first_name&quot;: &quot;Heaven&quot;,
+      &quot;last_name&quot;: &quot;Lueilwitz&quot;,
+      &quot;phone_location&quot;: {
+        &quot;latitude&quot;: -68.58028240763666,
+        &quot;longitude&quot;: -36.33802212872661,
+        &quot;elevation&quot;: 5.112750509664643
+      },
+      &quot;stated_location&quot;: {
+        &quot;latitude&quot;: -21.827006836098036,
+        &quot;longitude&quot;: 120.04704289714755,
+        &quot;elevation&quot;: 47.10203720843123
+      }
+    },
+    {
+      &quot;first_name&quot;: &quot;Kiley&quot;,
+      &quot;last_name&quot;: &quot;Jones&quot;,
+      &quot;phone_location&quot;: {
+        &quot;latitude&quot;: -32.41308512949079,
+        &quot;longitude&quot;: -95.61140054025,
+        &quot;elevation&quot;: 20.73801037500137
+      },
+      &quot;stated_location&quot;: {
+        &quot;latitude&quot;: 37.59752497640541,
+        &quot;longitude&quot;: -167.73389995056124,
+        &quot;elevation&quot;: 44.104640264267495
+      }
+    },
+    {
+      &quot;first_name&quot;: &quot;Kyra&quot;,
+      &quot;last_name&quot;: &quot;Bode&quot;,
+      &quot;phone_location&quot;: {
+        &quot;latitude&quot;: -73.92621634846817,
+        &quot;longitude&quot;: 111.49779539673187,
+        &quot;elevation&quot;: 46.444739310754876
+      },
+      &quot;stated_location&quot;: {
+        &quot;latitude&quot;: -23.036723676886766,
+        &quot;longitude&quot;: -20.05378784481431,
+        &quot;elevation&quot;: 14.236543600312402
+      }
+    },
+    {
+      &quot;first_name&quot;: &quot;Jairo&quot;,
+      &quot;last_name&quot;: &quot;Murray&quot;,
+      &quot;phone_location&quot;: {
+        &quot;latitude&quot;: -16.71828539309415,
+        &quot;longitude&quot;: -35.06069249789434,
+        &quot;elevation&quot;: 69.98093096664151
+      },
+      &quot;stated_location&quot;: {
+        &quot;latitude&quot;: -11.549046110050114,
+        &quot;longitude&quot;: 52.91811876506918,
+        &quot;elevation&quot;: 76.93706940965913
+      }
+    },
+    {
+      &quot;first_name&quot;: &quot;Seth&quot;,
+      &quot;last_name&quot;: &quot;Welch&quot;,
+      &quot;phone_location&quot;: {
+        &quot;latitude&quot;: -30.156035120024747,
+        &quot;longitude&quot;: -119.63562107674969,
+        &quot;elevation&quot;: 57.62706021907948
+      },
+      &quot;stated_location&quot;: {
+        &quot;latitude&quot;: -25.062362668462214,
+        &quot;longitude&quot;: -134.4196039283013,
+        &quot;elevation&quot;: 78.80364955304955
+      }
+    },
+    {
+      &quot;first_name&quot;: &quot;Sincere&quot;,
+      &quot;last_name&quot;: &quot;Douglas&quot;,
+      &quot;phone_location&quot;: {
+        &quot;latitude&quot;: -69.91438113017445,
+        &quot;longitude&quot;: 46.867004312275014,
+        &quot;elevation&quot;: 94.0574400703994
+      },
+      &quot;stated_location&quot;: {
+        &quot;latitude&quot;: 86.29250508545272,
+        &quot;longitude&quot;: 70.31659934636423,
+        &quot;elevation&quot;: 57.784166311159446
+      }
+    },
+    {
+      &quot;first_name&quot;: &quot;Dominic&quot;,
+      &quot;last_name&quot;: &quot;Corwin&quot;,
+      &quot;phone_location&quot;: {
+        &quot;latitude&quot;: -19.582549656616266,
+        &quot;longitude&quot;: -54.053090567769644,
+        &quot;elevation&quot;: 97.25859751821179
+      },
+      &quot;stated_location&quot;: {
+        &quot;latitude&quot;: 21.711834242587685,
+        &quot;longitude&quot;: 26.85960875579434,
+        &quot;elevation&quot;: 18.481540548321263
+      }
+    },
+    {
+      &quot;first_name&quot;: &quot;Jaycee&quot;,
+      &quot;last_name&quot;: &quot;Stoltenberg&quot;,
+      &quot;phone_location&quot;: {
+        &quot;latitude&quot;: -8.36205190157132,
+        &quot;longitude&quot;: 147.85647202552838,
+        &quot;elevation&quot;: 23.67313669282396
+      },
+      &quot;stated_location&quot;: {
+        &quot;latitude&quot;: -58.59546278879366,
+        &quot;longitude&quot;: 74.18952282375895,
+        &quot;elevation&quot;: 81.91894452886643
+      }
+    },
+    {
+      &quot;first_name&quot;: &quot;Ora&quot;,
+      &quot;last_name&quot;: &quot;Marquardt&quot;,
+      &quot;phone_location&quot;: {
+        &quot;latitude&quot;: 60.617157700064155,
+        &quot;longitude&quot;: 163.02546484686866,
+        &quot;elevation&quot;: 65.55389509558528
+      },
+      &quot;stated_location&quot;: {
+        &quot;latitude&quot;: -35.995409701762014,
+        &quot;longitude&quot;: -81.0453901072884,
+        &quot;elevation&quot;: 51.73663960260348
+      }
+    },
+    {
+      &quot;first_name&quot;: &quot;Dane&quot;,
+      &quot;last_name&quot;: &quot;Abernathy&quot;,
+      &quot;phone_location&quot;: {
+        &quot;latitude&quot;: -28.078925840651856,
+        &quot;longitude&quot;: -162.5053854049354,
+        &quot;elevation&quot;: 31.492451379108445
+      },
+      &quot;stated_location&quot;: {
+        &quot;latitude&quot;: 54.45028501327221,
+        &quot;longitude&quot;: 143.93774495634034,
+        &quot;elevation&quot;: 80.83324353327367
+      }
+    },
+    {
+      &quot;first_name&quot;: &quot;Jennyfer&quot;,
+      &quot;last_name&quot;: &quot;Krajcik&quot;,
+      &quot;phone_location&quot;: {
+        &quot;latitude&quot;: 55.854780540460126,
+        &quot;longitude&quot;: -117.67006736988586,
+        &quot;elevation&quot;: 29.78276949334232
+      },
+      &quot;stated_location&quot;: {
+        &quot;latitude&quot;: -20.001251274142135,
+        &quot;longitude&quot;: 64.85406769250741,
+        &quot;elevation&quot;: 47.660924394985
+      }
+    },
+    {
+      &quot;first_name&quot;: &quot;Clovis&quot;,
+      &quot;last_name&quot;: &quot;Stracke&quot;,
+      &quot;phone_location&quot;: {
+        &quot;latitude&quot;: -18.092551385126782,
+        &quot;longitude&quot;: 37.934335863385286,
+        &quot;elevation&quot;: 33.72943707527348
+      },
+      &quot;stated_location&quot;: {
+        &quot;latitude&quot;: 76.73814345569812,
+        &quot;longitude&quot;: -101.46920539517838,
+        &quot;elevation&quot;: 60.55677800775213
+      }
+    },
+    {
+      &quot;first_name&quot;: &quot;Caesar&quot;,
+      &quot;last_name&quot;: &quot;Ortiz&quot;,
+      &quot;phone_location&quot;: {
+        &quot;latitude&quot;: -87.93627677319269,
+        &quot;longitude&quot;: -176.87253734343747,
+        &quot;elevation&quot;: 34.9703037145651
+      },
+      &quot;stated_location&quot;: {
+        &quot;latitude&quot;: -24.748471446569695,
+        &quot;longitude&quot;: -39.34904013066978,
+        &quot;elevation&quot;: 17.497434326546802
+      }
+    },
+    {
+      &quot;first_name&quot;: &quot;Braxton&quot;,
+      &quot;last_name&quot;: &quot;Grimes&quot;,
+      &quot;phone_location&quot;: {
+        &quot;latitude&quot;: -29.779375236780332,
+        &quot;longitude&quot;: -119.81174182967823,
+        &quot;elevation&quot;: 97.57234830473776
+      },
+      &quot;stated_location&quot;: {
+        &quot;latitude&quot;: 84.1472709147213,
+        &quot;longitude&quot;: -157.5475725319962,
+        &quot;elevation&quot;: 43.89726722106734
+      }
+    },
+    {
+      &quot;first_name&quot;: &quot;Burnice&quot;,
+      &quot;last_name&quot;: &quot;Wolf&quot;,
+      &quot;phone_location&quot;: {
+        &quot;latitude&quot;: 46.54522930907669,
+        &quot;longitude&quot;: 155.49767609480705,
+        &quot;elevation&quot;: 7.423727460637808
+      },
+      &quot;stated_location&quot;: {
+        &quot;latitude&quot;: 68.16070393469184,
+        &quot;longitude&quot;: -124.18781404482198,
+        &quot;elevation&quot;: 37.35526827403067
+      }
+    },
+    {
+      &quot;first_name&quot;: &quot;Soledad&quot;,
+      &quot;last_name&quot;: &quot;Runolfsson&quot;,
+      &quot;phone_location&quot;: {
+        &quot;latitude&quot;: 34.7704147749904,
+        &quot;longitude&quot;: -39.19901058983882,
+        &quot;elevation&quot;: 38.60623180698269
+      },
+      &quot;stated_location&quot;: {
+        &quot;latitude&quot;: 89.80491184185155,
+        &quot;longitude&quot;: 150.00489901017016,
+        &quot;elevation&quot;: 32.06125680744303
+      }
+    },
+    {
+      &quot;first_name&quot;: &quot;Ramona&quot;,
+      &quot;last_name&quot;: &quot;Bins&quot;,
+      &quot;phone_location&quot;: {
+        &quot;latitude&quot;: 82.87938507570121,
+        &quot;longitude&quot;: -41.67447009709613,
+        &quot;elevation&quot;: 44.39582610274091
+      },
+      &quot;stated_location&quot;: {
+        &quot;latitude&quot;: -76.11219138955092,
+        &quot;longitude&quot;: 105.34132624363923,
+        &quot;elevation&quot;: 32.43931096760859
+      }
+    },
+    {
+      &quot;first_name&quot;: &quot;Roselyn&quot;,
+      &quot;last_name&quot;: &quot;Littel&quot;,
+      &quot;phone_location&quot;: {
+        &quot;latitude&quot;: 76.86770255929036,
+        &quot;longitude&quot;: 52.42868917766938,
+        &quot;elevation&quot;: 89.57506717305964
+      },
+      &quot;stated_location&quot;: {
+        &quot;latitude&quot;: -73.31279263558537,
+        &quot;longitude&quot;: -7.475197679206644,
+        &quot;elevation&quot;: 55.831038550619226
+      }
+    },
+    {
+      &quot;first_name&quot;: &quot;Rachael&quot;,
+      &quot;last_name&quot;: &quot;Kohler&quot;,
+      &quot;phone_location&quot;: {
+        &quot;latitude&quot;: -78.17988767350303,
+        &quot;longitude&quot;: 86.58320952308912,
+        &quot;elevation&quot;: 92.60217430918266
+      },
+      &quot;stated_location&quot;: {
+        &quot;latitude&quot;: -24.817252739998338,
+        &quot;longitude&quot;: 38.412440227797134,
+        &quot;elevation&quot;: 41.21482699155836
+      }
+    },
+    {
+      &quot;first_name&quot;: &quot;Ivah&quot;,
+      &quot;last_name&quot;: &quot;Zemlak&quot;,
+      &quot;phone_location&quot;: {
+        &quot;latitude&quot;: -14.262331533964954,
+        &quot;longitude&quot;: 79.90914936637711,
+        &quot;elevation&quot;: 90.47029543046648
+      },
+      &quot;stated_location&quot;: {
+        &quot;latitude&quot;: 29.85794843031094,
+        &quot;longitude&quot;: 13.019581654967624,
+        &quot;elevation&quot;: 77.06511447144848
+      }
+    },
+    {
+      &quot;first_name&quot;: &quot;Ernesto&quot;,
+      &quot;last_name&quot;: &quot;Dicki&quot;,
+      &quot;phone_location&quot;: {
+        &quot;latitude&quot;: -5.8791689936766005,
+        &quot;longitude&quot;: -60.93385771117991,
+        &quot;elevation&quot;: 39.34158154710617
+      },
+      &quot;stated_location&quot;: {
+        &quot;latitude&quot;: 78.83019035992564,
+        &quot;longitude&quot;: 168.13305148125897,
+        &quot;elevation&quot;: 66.98948345645144
+      }
+    },
+    {
+      &quot;first_name&quot;: &quot;Jennyfer&quot;,
+      &quot;last_name&quot;: &quot;Cremin&quot;,
+      &quot;phone_location&quot;: {
+        &quot;latitude&quot;: -75.75372991148083,
+        &quot;longitude&quot;: 40.436657136157635,
+        &quot;elevation&quot;: 20.65402430524924
+      },
+      &quot;stated_location&quot;: {
+        &quot;latitude&quot;: 16.660807010227373,
+        &quot;longitude&quot;: 10.631249360897698,
+        &quot;elevation&quot;: 70.40672700096971
+      }
+    },
+    {
+      &quot;first_name&quot;: &quot;Christ&quot;,
+      &quot;last_name&quot;: &quot;Schulist&quot;,
+      &quot;phone_location&quot;: {
+        &quot;latitude&quot;: -11.552787832628837,
+        &quot;longitude&quot;: 37.09586387591989,
+        &quot;elevation&quot;: 69.2980656045873
+      },
+      &quot;stated_location&quot;: {
+        &quot;latitude&quot;: 66.89033742860116,
+        &quot;longitude&quot;: -149.85477130953143,
+        &quot;elevation&quot;: 6.796835515481114
+      }
+    },
+    {
+      &quot;first_name&quot;: &quot;Cooper&quot;,
+      &quot;last_name&quot;: &quot;Wilkinson&quot;,
+      &quot;phone_location&quot;: {
+        &quot;latitude&quot;: -62.10653279830563,
+        &quot;longitude&quot;: -6.9999957532795065,
+        &quot;elevation&quot;: 29.376728062984725
+      },
+      &quot;stated_location&quot;: {
+        &quot;latitude&quot;: 33.89368042636639,
+        &quot;longitude&quot;: 142.9150594847506,
+        &quot;elevation&quot;: 71.42378052124604
+      }
+    },
+    {
+      &quot;first_name&quot;: &quot;Alejandrin&quot;,
+      &quot;last_name&quot;: &quot;Bauch&quot;,
+      &quot;phone_location&quot;: {
+        &quot;latitude&quot;: 31.84005737385587,
+        &quot;longitude&quot;: -39.113893765459494,
+        &quot;elevation&quot;: 12.857343339672333
+      },
+      &quot;stated_location&quot;: {
+        &quot;latitude&quot;: -33.043533182361465,
+        &quot;longitude&quot;: 64.22539581611892,
+        &quot;elevation&quot;: 58.45272330075406
+      }
+    },
+    {
+      &quot;first_name&quot;: &quot;Leonora&quot;,
+      &quot;last_name&quot;: &quot;Beier&quot;,
+      &quot;phone_location&quot;: {
+        &quot;latitude&quot;: -52.968281551224656,
+        &quot;longitude&quot;: -92.42755892120523,
+        &quot;elevation&quot;: 70.86805401894182
+      },
+      &quot;stated_location&quot;: {
+        &quot;latitude&quot;: -88.49017199374764,
+        &quot;longitude&quot;: 68.74974177088362,
+        &quot;elevation&quot;: 9.838600859211565
+      }
+    },
+    {
+      &quot;first_name&quot;: &quot;Orville&quot;,
+      &quot;last_name&quot;: &quot;Hammes&quot;,
+      &quot;phone_location&quot;: {
+        &quot;latitude&quot;: 41.41207260305376,
+        &quot;longitude&quot;: 159.7407206882009,
+        &quot;elevation&quot;: 42.742178296848735
+      },
+      &quot;stated_location&quot;: {
+        &quot;latitude&quot;: 69.53391236842987,
+        &quot;longitude&quot;: -121.30190116980668,
+        &quot;elevation&quot;: 71.23156686414774
+      }
+    },
+    {
+      &quot;first_name&quot;: &quot;Darrin&quot;,
+      &quot;last_name&quot;: &quot;Schultz&quot;,
+      &quot;phone_location&quot;: {
+        &quot;latitude&quot;: -24.620503632225365,
+        &quot;longitude&quot;: 11.962131326498252,
+        &quot;elevation&quot;: 91.45426781392408
+      },
+      &quot;stated_location&quot;: {
+        &quot;latitude&quot;: 62.38014700131271,
+        &quot;longitude&quot;: -82.03282204374095,
+        &quot;elevation&quot;: 5.835914115330699
+      }
+    },
+    {
+      &quot;first_name&quot;: &quot;Watson&quot;,
+      &quot;last_name&quot;: &quot;Hoppe&quot;,
+      &quot;phone_location&quot;: {
+        &quot;latitude&quot;: -86.93157766975393,
+        &quot;longitude&quot;: -41.117727289438136,
+        &quot;elevation&quot;: 24.222795209186533
+      },
+      &quot;stated_location&quot;: {
+        &quot;latitude&quot;: -27.11817150261882,
+        &quot;longitude&quot;: -167.21070443337996,
+        &quot;elevation&quot;: 46.32211304852598
+      }
+    },
+    {
+      &quot;first_name&quot;: &quot;Baby&quot;,
+      &quot;last_name&quot;: &quot;Fisher&quot;,
+      &quot;phone_location&quot;: {
+        &quot;latitude&quot;: -35.15237337668376,
+        &quot;longitude&quot;: -73.82444439308595,
+        &quot;elevation&quot;: 68.90572389275374
+      },
+      &quot;stated_location&quot;: {
+        &quot;latitude&quot;: -23.22036646556809,
+        &quot;longitude&quot;: -55.993074647222,
+        &quot;elevation&quot;: 7.355858743465116
+      }
+    },
+    {
+      &quot;first_name&quot;: &quot;Wilber&quot;,
+      &quot;last_name&quot;: &quot;Lesch&quot;,
+      &quot;phone_location&quot;: {
+        &quot;latitude&quot;: 62.39712347756446,
+        &quot;longitude&quot;: 156.80938168113414,
+        &quot;elevation&quot;: 14.7801865604833
+      },
+      &quot;stated_location&quot;: {
+        &quot;latitude&quot;: -19.74015735946584,
+        &quot;longitude&quot;: -148.458833701921,
+        &quot;elevation&quot;: 19.3651126866218
+      }
+    },
+    {
+      &quot;first_name&quot;: &quot;Lois&quot;,
+      &quot;last_name&quot;: &quot;Johnson&quot;,
+      &quot;phone_location&quot;: {
+        &quot;latitude&quot;: 64.81948954399198,
+        &quot;longitude&quot;: 137.13932531277135,
+        &quot;elevation&quot;: 3.710807918320791
+      },
+      &quot;stated_location&quot;: {
+        &quot;latitude&quot;: 12.013371229273346,
+        &quot;longitude&quot;: 94.23021534334504,
+        &quot;elevation&quot;: 89.49283960323258
+      }
+    }
+  ]
+}</pre>
+
+          <h2>Errors</h2>
+            408
+            Request timeout
+            <pre class="prettyprint lang-yaml">--- 
+...
+</pre>
+
+            <br>
+
+      </div>
+      <hr>
+
+      <ul class='breadcrumb' id='geo_api-show'>
+        <li>
+          <a href='#'>NsaApi</a>
+          <span class='divider'>/</span>
+        </li>
+        <li>
+          <a href='#geo_api'>Geo api</a>
+          <span class='divider'>/</span>
+        </li>
+        <li class='active'>show</li>
+      </ul>
+
+      <div>
+          <h3>
+            <a href='#geo_api-show'>
+              GET /location
+            </a><br>
+            <small>Get location data specific to a User.</small>
+          </h3>
+      </div>
+
+      <div>
+        
+          <h2>Examples</h2>
+            <pre>GET /location?first_name=Rosamond&amp;ip=50.250.223.177&amp;last_name=Tromp
+200
+{
+  &quot;first_name&quot;: &quot;Rosamond&quot;,
+  &quot;last_name&quot;: &quot;Tromp&quot;,
+  &quot;phone_distance_from_ip&quot;: 17945.3837,
+  &quot;stated_distance_from_ip&quot;: 13992.9633,
+  &quot;stated_distance_from_phone&quot;: 5165.9513
+}</pre>
+
+          <h2>Errors</h2>
+            408
+            Request timeout
+            <pre class="prettyprint lang-yaml">--- 
+...
+</pre>
+
+            <br>
+            404
+            User location data unavailable
+            <pre class="prettyprint lang-yaml">--- 
+...
+</pre>
+
+            <br>
+
+          <h2>Params</h2>
+          <table class='table'>
+            <thead>
+              <tr>
+                <th>Param name</th>
+                <th>Description</th>
+              </tr>
+            </thead>
+            <tbody>
+                <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>first_name </strong><br>
+      <small>
+        required
+        
+      </small>
+    </td>
+    <td>
+      
+<p>First name of person</p>
+
+        <br>
+        Value: 
+<p>Must be String</p>
+
+
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>last_name </strong><br>
+      <small>
+        required
+        
+      </small>
+    </td>
+    <td>
+      
+<p>Last name of person</p>
+
+        <br>
+        Value: 
+<p>Must be String</p>
+
+
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>ip </strong><br>
+      <small>
+        optional
+        
+      </small>
+    </td>
+    <td>
+      
+<p>Optional IP address</p>
+
+        <br>
+        Value: 
+<p>Must be String</p>
+
+
+
+    </td>
+
+  </tr>
+
+  
+
+            </tbody>
+          </table>
+      </div>
+  </div>
+
+
+        
+      </div>
+    </div>
+    <hr>
+    <footer></footer>
+  </div>
+  <script type='text/javascript' src='./apidoc/javascripts/bundled/jquery-1.7.2.js'></script>
+<script type='text/javascript' src='./apidoc/javascripts/bundled/bootstrap-collapse.js'></script>
+<script type='text/javascript' src='./apidoc/javascripts/bundled/prettify.js'></script>
+<script type='text/javascript' src='./apidoc/javascripts/apipie.js'></script>
+</body>
+</html>
