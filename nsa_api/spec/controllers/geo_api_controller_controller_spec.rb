@@ -1,5 +1,6 @@
 require 'rails_helper'
 require 'spec_helper'
+require 'uri'
 
 RSpec.describe GeoApiController, type: :controller do
 
@@ -34,6 +35,29 @@ RSpec.describe GeoApiController, type: :controller do
         it "Checks that the proper status is returned" do
           VCR.use_cassette('controller/all_internal_data') do
             request = Net::HTTP.new('localhost', 3000).get('/')
+            expect(request.code.to_i).to be_in([200, 408])
+          end
+        end
+      end
+
+      describe "get specific user object" do
+        it "Gets a specific users object given params" do
+          VCR.use_cassette('controller/specific_internal_data') do
+
+            # uri = URI.parse("http://localhost:3000/location"); params = {:first_name => 'Rosamond', :last_name => 'Tromp'}
+            # uri.query = URI.encode_www_form(params)
+
+            # binding.pry
+            # response = Net::HTTP.get(uri)
+            # encoded_params = URI.encode_www_form(params)
+            # [path, encoded_params].join("?")
+
+            # http = Net::HTTP.new(uri.host, 3000)
+            # request = Net::HTTP.get(uri.path)
+            request = Net::HTTP.new('localhost', 3000).get('/location?last_name=Tromp&first_name=Rosamond')
+
+
+            binding.pry
             expect(request.code.to_i).to be_in([200, 408])
           end
         end
