@@ -7,7 +7,9 @@ class GeoApiController < ApplicationController
   include GeoLocation
   include HttpRequests
 
-  api :GET, "/index", "List all user data"
+  api :GET, "/index", "List all user data provided by the NSA."
+  #above is DSL specific to the API documentation generator
+
   def index
     request = timed_get_all
     return (render json: @delayed, status: 408) if @delayed
@@ -15,15 +17,11 @@ class GeoApiController < ApplicationController
     render json: { geo_api: request.body}, status: 200   
   end
 
-  api :GET, "/location", "Get user location data"
-
-  param :param, Hash, :desc => 'Param hash for all locations' do
+  api :GET, "/location", "Get location data specific to a User."
     param :first_name, String, :desc => "First name of person", :required => true
     param :last_name, String, :desc => "Last name of person", :required => true
     param :ip, String, :desc => "Optional IP address", :required => false
-  end
-
-
+  
   def show
     ip_coords = config_ip_coords(params[:ip])
     user_info = timed_get_user(params[:first_name], params[:last_name])

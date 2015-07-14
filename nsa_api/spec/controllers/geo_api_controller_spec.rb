@@ -9,7 +9,7 @@ RSpec.describe GeoApiController, type: :controller do
         it "gets a response from the blockscore api" do
           VCR.use_cassette 'controller/gov_api_response' do
             request = Faraday.get("https://gov.blockscore.com/api/people")
-            request.status.should be_in([200, 408])
+            expect(request.status).to be_in([200, 408])
           end
         end
 

@@ -14,7 +14,7 @@
       <img src="./assets/0.10.0/loading.gif" alt="loading"/>
     </div>
     <div id="wrapper" style="display:none;">
-      <div class="timestamp">Generated <abbr class="timeago" title="2015-07-14T00:58:13-07:00">2015-07-14T00:58:13-07:00</abbr></div>
+      <div class="timestamp">Generated <abbr class="timeago" title="2015-07-14T01:52:59-07:00">2015-07-14T01:52:59-07:00</abbr></div>
       <ul class="group_tabs"></ul>
 
       <div id="content">
@@ -2999,7 +2999,7 @@
         <li class="covered" data-hits="1" data-linenumber="8">
           <span class="hits">1</span>
           
-          <code class="ruby">        response.status.should be_in([200, 408])</code>
+          <code class="ruby">        expect(response.status).to be_in([200, 408])</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="9">
@@ -3041,7 +3041,7 @@
         <li class="covered" data-hits="1" data-linenumber="15">
           <span class="hits">1</span>
           
-          <code class="ruby">          json[&quot;geo_api&quot;].length.should be(100)</code>
+          <code class="ruby">          expect(json[&quot;geo_api&quot;].length).to be(100)</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="16">
@@ -3107,7 +3107,7 @@
         <li class="covered" data-hits="1" data-linenumber="26">
           <span class="hits">1</span>
           
-          <code class="ruby">          json.length.should be(5)</code>
+          <code class="ruby">          expect(json.length).to be(5)</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="27">
@@ -3119,7 +3119,7 @@
         <li class="missed" data-hits="0" data-linenumber="28">
           
           
-          <code class="ruby">          response.status.should be(408)</code>
+          <code class="ruby">          expect(response.status).to be(408)</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="29">
@@ -3161,7 +3161,7 @@
         <li class="covered" data-hits="1" data-linenumber="35">
           <span class="hits">1</span>
           
-          <code class="ruby">        response.status.should be(404)</code>
+          <code class="ruby">        expect(response.status).to be(404)</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="36">
