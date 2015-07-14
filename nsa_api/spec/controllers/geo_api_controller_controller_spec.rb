@@ -28,6 +28,8 @@ RSpec.describe GeoApiController, type: :controller do
         it "Checks that 100 objects are returned" do
           VCR.use_cassette('controller/all_internal_data') do
             request = Net::HTTP.get_response('localhost', '/', 3000).body
+
+            binding.pry
             expect(JSON.parse(request)["geo_api"].length).to be(100)
           end
         end
@@ -42,23 +44,12 @@ RSpec.describe GeoApiController, type: :controller do
 
       describe "get specific user object" do
         it "Gets a specific users object given params" do
-          VCR.use_cassette('controller/specific_internal_data') do
-
-            # uri = URI.parse("http://localhost:3000/location"); params = {:first_name => 'Rosamond', :last_name => 'Tromp'}
-            # uri.query = URI.encode_www_form(params)
-
-            # binding.pry
-            # response = Net::HTTP.get(uri)
-            # encoded_params = URI.encode_www_form(params)
-            # [path, encoded_params].join("?")
-
-            # http = Net::HTTP.new(uri.host, 3000)
-            # request = Net::HTTP.get(uri.path)
+          VCR.use_cassette('controller/specific_internal_data', :record => :new_episodes) do
             request = Net::HTTP.new('localhost', 3000).get('/location?last_name=Tromp&first_name=Rosamond')
+            request = Net::HTTP.get_response('localhost', '/location?last_name=Tromp&first_name=Rosamond', 3000).body
 
-
-            binding.pry
-            expect(request.code.to_i).to be_in([200, 408])
+            data = JSON.parse(request)
+            expect(data["stated_distance_from_phone"]).to be_a(Float)
           end
         end
       end 
