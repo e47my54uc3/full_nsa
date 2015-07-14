@@ -14,27 +14,27 @@
       <img src="./assets/0.10.0/loading.gif" alt="loading"/>
     </div>
     <div id="wrapper" style="display:none;">
-      <div class="timestamp">Generated <abbr class="timeago" title="2015-07-13T21:35:33-07:00">2015-07-13T21:35:33-07:00</abbr></div>
+      <div class="timestamp">Generated <abbr class="timeago" title="2015-07-13T21:50:46-07:00">2015-07-13T21:50:46-07:00</abbr></div>
       <ul class="group_tabs"></ul>
 
       <div id="content">
         <div class="file_list_container" id="AllFiles">
   <h2>
     <span class="group_name">All Files</span>
-    (<span class="covered_percent"><span class="green">96.63%</span></span>
+    (<span class="covered_percent"><span class="green">97.88%</span></span>
      covered at
      <span class="covered_strength">
        <span class="green">
-         3.68
+         3.64
        </span>
     </span> hits/line)
   </h2>
   <a name="AllFiles"></a>
   <div>
-    <b>24</b> files in total.
-    <b>178</b> relevant lines. 
-    <span class="green"><b>172</b> lines covered</span> and
-    <span class="red"><b>6</b> lines missed </span>
+    <b>25</b> files in total.
+    <b>189</b> relevant lines. 
+    <span class="green"><b>185</b> lines covered</span> and
+    <span class="red"><b>4</b> lines missed </span>
   </div>
   <table class="file_list">
     <thead>
@@ -212,12 +212,12 @@
       
       <tr>
         <td class="strong"><a href="#38ee75bb39184ba33aa1bf79cc7966eaa38fe65c" class="src_link" title="lib/config_coordinates.rb">lib/config_coordinates.rb</a></td>
-        <td class="yellow strong">81.82 %</td>
+        <td class="green strong">100.0 %</td>
         <td>19</td>
         <td>11</td>
-        <td>9</td>
-        <td>2</td>
-        <td>1.4</td>
+        <td>11</td>
+        <td>0</td>
+        <td>1.9</td>
       </tr>
       
       <tr>
@@ -227,7 +227,7 @@
         <td>16</td>
         <td>16</td>
         <td>0</td>
-        <td>5.3</td>
+        <td>6.0</td>
       </tr>
       
       <tr>
@@ -251,6 +251,16 @@
       </tr>
       
       <tr>
+        <td class="strong"><a href="#0cb300c5c3b91d34d7a578735851e64fb4f40a32" class="src_link" title="spec/modules/config_coordinates_spec.rb">spec/modules/config_coordinates_spec.rb</a></td>
+        <td class="green strong">100.0 %</td>
+        <td>23</td>
+        <td>11</td>
+        <td>11</td>
+        <td>0</td>
+        <td>1.0</td>
+      </tr>
+      
+      <tr>
         <td class="strong"><a href="#0060fae2d9b88c41b3e76c9911fa57756b38a698" class="src_link" title="spec/modules/geo_location_spec.rb">spec/modules/geo_location_spec.rb</a></td>
         <td class="green strong">100.0 %</td>
         <td>37</td>
@@ -267,7 +277,7 @@
         <td>11</td>
         <td>10</td>
         <td>1</td>
-        <td>5.3</td>
+        <td>5.8</td>
       </tr>
       
       <tr>
@@ -2139,11 +2149,11 @@
         <div class="source_table" id="38ee75bb39184ba33aa1bf79cc7966eaa38fe65c">
   <div class="header">
     <h3>lib/config_coordinates.rb</h3>
-    <h4><span class="yellow">81.82 %</span> covered</h4>
+    <h4><span class="green">100.0 %</span> covered</h4>
     <div>
       <b>11</b> relevant lines. 
-      <span class="green"><b>9</b> lines covered</span> and
-      <span class="red"><b>2</b> lines missed.</span>
+      <span class="green"><b>11</b> lines covered</span> and
+      <span class="red"><b>0</b> lines missed.</span>
     </div>
   </div>
   
@@ -2174,20 +2184,20 @@
           <code class="ruby">  def config_ip_coords(string_ip)</code>
         </li>
       
-        <li class="covered" data-hits="3" data-linenumber="5">
-          <span class="hits">3</span>
+        <li class="covered" data-hits="5" data-linenumber="5">
+          <span class="hits">5</span>
           
           <code class="ruby">    if IPAddress.valid?(string_ip) </code>
         </li>
       
-        <li class="covered" data-hits="3" data-linenumber="6">
-          <span class="hits">3</span>
+        <li class="covered" data-hits="4" data-linenumber="6">
+          <span class="hits">4</span>
           
           <code class="ruby">      puts &quot;Ip is ok&quot;</code>
         </li>
       
-        <li class="covered" data-hits="3" data-linenumber="7">
-          <span class="hits">3</span>
+        <li class="covered" data-hits="4" data-linenumber="7">
+          <span class="hits">4</span>
           
           <code class="ruby">      get_ip_coords(string_ip)</code>
         </li>
@@ -2198,14 +2208,14 @@
           <code class="ruby">    else</code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="9">
-          
+        <li class="covered" data-hits="1" data-linenumber="9">
+          <span class="hits">1</span>
           
           <code class="ruby">      puts &quot;Defaulting to an sf ip&quot;</code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="10">
-          
+        <li class="covered" data-hits="1" data-linenumber="10">
+          <span class="hits">1</span>
           
           <code class="ruby">      get_ip_coords(&quot;24.7.88.70&quot;)</code>
         </li>
@@ -2312,14 +2322,14 @@
           <code class="ruby">  def get_ip_coords(ip)</code>
         </li>
       
-        <li class="covered" data-hits="5" data-linenumber="6">
-          <span class="hits">5</span>
+        <li class="covered" data-hits="9" data-linenumber="6">
+          <span class="hits">9</span>
           
           <code class="ruby">    resp = Net::HTTP.get_response(URI(&quot;http://ipinfo.io/#{ip}/json&quot;))</code>
         </li>
       
-        <li class="covered" data-hits="5" data-linenumber="7">
-          <span class="hits">5</span>
+        <li class="covered" data-hits="9" data-linenumber="7">
+          <span class="hits">9</span>
           
           <code class="ruby">    coords = JSON.parse(resp.body)</code>
         </li>
@@ -2330,8 +2340,8 @@
           <code class="ruby">    </code>
         </li>
       
-        <li class="covered" data-hits="5" data-linenumber="9">
-          <span class="hits">5</span>
+        <li class="covered" data-hits="9" data-linenumber="9">
+          <span class="hits">9</span>
           
           <code class="ruby">    coords[&quot;loc&quot;].split(&#39;,&#39;).map(&amp;:to_f)</code>
         </li>
@@ -3006,6 +3016,162 @@
   </pre>
 </div>
       
+        <div class="source_table" id="0cb300c5c3b91d34d7a578735851e64fb4f40a32">
+  <div class="header">
+    <h3>spec/modules/config_coordinates_spec.rb</h3>
+    <h4><span class="green">100.0 %</span> covered</h4>
+    <div>
+      <b>11</b> relevant lines. 
+      <span class="green"><b>11</b> lines covered</span> and
+      <span class="red"><b>0</b> lines missed.</span>
+    </div>
+  </div>
+  
+  <pre>
+    <ol>
+      
+        <li class="covered" data-hits="1" data-linenumber="1">
+          <span class="hits">1</span>
+          
+          <code class="ruby">require &#39;config_coordinates&#39;</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="2">
+          <span class="hits">1</span>
+          
+          <code class="ruby">require &#39;geo_location&#39;</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="3">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="4">
+          <span class="hits">1</span>
+          
+          <code class="ruby">RSpec.configure do |c|</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="5">
+          <span class="hits">1</span>
+          
+          <code class="ruby">  c.include ConfigCoordinates</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="6">
+          <span class="hits">1</span>
+          
+          <code class="ruby">  c.include GeoLocation</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="7">
+          
+          
+          <code class="ruby">end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="8">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="9">
+          <span class="hits">1</span>
+          
+          <code class="ruby">RSpec.describe ConfigCoordinates do</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="10">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="11">
+          <span class="hits">1</span>
+          
+          <code class="ruby">  describe &quot;Configuring an IP&quot; do</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="12">
+          
+          
+          <code class="ruby">    </code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="13">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="14">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    it &quot;returns coordinates for a valid IP&quot; do</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="15">
+          <span class="hits">1</span>
+          
+          <code class="ruby">      expect(config_ip_coords(&quot;208.184.96.233&quot;)).to eq(get_ip_coords(&quot;208.184.96.233&quot;))</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="16">
+          
+          
+          <code class="ruby">    end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="17">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="18">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    it &quot;default to an sf IP for invalid coordinates&quot; do</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="19">
+          <span class="hits">1</span>
+          
+          <code class="ruby">      expect(config_ip_coords(&quot;testaroo&quot;)).to eq(get_ip_coords(&quot;24.7.88.70&quot;))</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="20">
+          
+          
+          <code class="ruby">    end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="21">
+          
+          
+          <code class="ruby">  end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="22">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="23">
+          
+          
+          <code class="ruby">end</code>
+        </li>
+      
+    </ol>
+  </pre>
+</div>
+      
         <div class="source_table" id="0060fae2d9b88c41b3e76c9911fa57756b38a698">
   <div class="header">
     <h3>spec/modules/geo_location_spec.rb</h3>
@@ -3071,7 +3237,7 @@
         <li class="covered" data-hits="1" data-linenumber="9">
           <span class="hits">1</span>
           
-          <code class="ruby">  context &quot;distance calculations&quot; do</code>
+          <code class="ruby">  describe &quot;distance calculations&quot; do</code>
         </li>
       
         <li class="covered" data-hits="3" data-linenumber="10">
@@ -3143,7 +3309,7 @@
         <li class="covered" data-hits="1" data-linenumber="21">
           <span class="hits">1</span>
           
-          <code class="ruby">  context &quot;parsing coordinates&quot; do</code>
+          <code class="ruby">  describe &quot;parsing coordinates&quot; do</code>
         </li>
       
         <li class="covered" data-hits="3" data-linenumber="22">
@@ -3185,7 +3351,7 @@
         <li class="covered" data-hits="1" data-linenumber="28">
           <span class="hits">1</span>
           
-          <code class="ruby">    it &quot;returns a float resresenting the latitude and longtitude&quot; do</code>
+          <code class="ruby">    it &quot;returns a float representing the latitude and longtitude&quot; do</code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="29">
@@ -3314,8 +3480,8 @@
           <code class="ruby">config.before(:each) do  </code>
         </li>
       
-        <li class="covered" data-hits="17" data-linenumber="10">
-          <span class="hits">17</span>
+        <li class="covered" data-hits="19" data-linenumber="10">
+          <span class="hits">19</span>
           
           <code class="ruby">DatabaseCleaner.strategy = :transaction  </code>
         </li>
@@ -3362,8 +3528,8 @@
           <code class="ruby">config.before(:each) do  </code>
         </li>
       
-        <li class="covered" data-hits="17" data-linenumber="18">
-          <span class="hits">17</span>
+        <li class="covered" data-hits="19" data-linenumber="18">
+          <span class="hits">19</span>
           
           <code class="ruby">DatabaseCleaner.start  </code>
         </li>
@@ -3386,8 +3552,8 @@
           <code class="ruby">config.after(:each) do  </code>
         </li>
       
-        <li class="covered" data-hits="17" data-linenumber="22">
-          <span class="hits">17</span>
+        <li class="covered" data-hits="19" data-linenumber="22">
+          <span class="hits">19</span>
           
           <code class="ruby">DatabaseCleaner.clean  </code>
         </li>

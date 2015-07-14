@@ -6,7 +6,7 @@ end
 
 RSpec.describe GeoLocation do
 
-  context "distance calculations" do
+  describe "distance calculations" do
     let (:test_location) {distance_km([23, 53], [-2, 32])}
 
     it "has access to the helper methods defined in the module" do
@@ -18,14 +18,14 @@ RSpec.describe GeoLocation do
     end
   end
 
-  context "parsing coordinates" do
+  describe "parsing coordinates" do
     let(:coordinates) { get_ip_coords("208.184.96.233") }
 
     it "returns an array of longtitude and latitude coordinates" do
       expect(coordinates.class).to be(Array)
     end
 
-    it "returns a float resresenting the latitude and longtitude" do
+    it "returns a float representing the latitude and longtitude" do
       expect(coordinates.first.class).to be(Float) 
       expect(coordinates.last.class).to be(Float)
     end
