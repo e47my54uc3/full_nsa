@@ -29,6 +29,7 @@ group :production do
   gem 'rails_12factor', '~> 0.0'
 end
 
+
 gem 'rails', '~> 4.2'
 gem 'pg', '~> 0.18'
 gem 'sass-rails', '~> 5.0'
@@ -43,6 +44,6 @@ gem 'unicorn', '~> 4.9'
 gem 'ipaddress', '~> 0.8'
 gem 'faraday', '~> 0.9'
 gem 'faraday_middleware', '~> 0.10'
-gem 'unirest', '~> 1.1.2'
 gem 'pessimize', '~> 0.1'
+gem 'typhoeus', '~> 0.7.2'
 

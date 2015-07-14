@@ -24,21 +24,22 @@ RSpec.describe GeoApiController, type: :controller do
       end
     end
 
-    # context "Internal calls" do
-    #   describe "get all internal user objects" do
-    #     it "Checks that 100 objects are returned" do
-    #       VCR.use_vcr_cassette('controller/all_internal_data', :record => :new_episodes) do
-    #         request = Faraday.get("https://gov.blockscore.com/api/people")
-    #         response = JSON.parse(request.body)
-    #         expect(response.length).to be(100)
+    context "Internal calls" do
+      describe "get all internal user objects" do
+        it "Checks that 100 objects are returned" do
+          VCR.use_cassette('controller/all_internal_data', :record => :new_episodes) do
+            request = Net::HTTP.get_response('localhost', '/', 3000).body
 
-    #       end
+            binding.pry
+            expect(JSON.parse(request)["geo_api"].length).to be(100)
 
-    #     end
+          end
 
-    #   end 
+        end
+
+      end 
 
 
-    # end
+    end
 
 end
