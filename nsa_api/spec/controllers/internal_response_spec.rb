@@ -1,3 +1,5 @@
+#will perform external api calls in order to complete internal operations
+
 RSpec.describe GeoApiController, type: :controller do
  context "integration tests" do
     describe "process api calls gracefully" do
