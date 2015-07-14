@@ -44,7 +44,6 @@ RSpec.describe GeoApiController, type: :controller do
       describe "get specific user object" do
         it "Gets a specific users object given params" do
           VCR.use_cassette('controller/specific_internal_data') do
-            request = Net::HTTP.new('localhost', 3000).get('/location?last_name=Tromp&first_name=Rosamond')
             request = Net::HTTP.get_response('localhost', '/location?last_name=Tromp&first_name=Rosamond', 3000).body
 
             data = JSON.parse(request)
@@ -53,14 +52,33 @@ RSpec.describe GeoApiController, type: :controller do
         end
       end 
 
-      describe "get specific user object" do
+      describe "get successful or delayed status" do
         it "responds with the appropriate status" do
           VCR.use_cassette('controller/specific_internal_data') do
-            request = Net::HTTP.new('localhost', 3000).get('/location?last_name=Tromp&first_name=Rosamond')
             request = Net::HTTP.get_response('localhost', '/location?last_name=Tromp&first_name=Rosamond', 3000)
 
             code = (request.code.to_i)
             expect(code).to be_in([200, 408])
+          end
+        end
+      end 
+
+      describe "respond with a 404 if user not found" do
+        it "responds with the appropriate status" do
+          VCR.use_cassette('controller/specific_internal_data') do
+            request = Net::HTTP.get_response('localhost', '/location?last_name=Raghu&first_name=Rosamond', 3000)
+
+            code = (request.code.to_i)
+            expect(code).to be(404)
+          end
+        end
+
+        it "responds with the appropriate error" do
+          VCR.use_cassette('controller/specific_internal_data') do
+            request = Net::HTTP.get_response('localhost', '/location?last_name=Raghu&first_name=Rosamond', 3000).body
+
+            data = JSON.parse(request)
+            expect(data["error"]).to eq("No user location data available.")
           end
         end
       end 
