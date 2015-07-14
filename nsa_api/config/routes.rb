@@ -8,8 +8,6 @@ Rails.application.routes.draw do
   # You can have the root of your site routed with "root"
   root 'geo_api#index'
 
-
-
   # Example of regular route:
   get 'all' => 'geo_api#index'
   get 'location' => 'geo_api#show'

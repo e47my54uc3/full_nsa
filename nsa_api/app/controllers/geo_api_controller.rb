@@ -19,8 +19,8 @@ class GeoApiController < ApplicationController
   end
 
         api :GET, "/location", "Get location data specific to a User."
-        param :first_name, String, :desc => "First name of person", :required => true
-        param :last_name, String, :desc => "Last name of person", :required => true
+        param :first_name, String, :desc => "First name of person", :required => false
+        param :last_name, String, :desc => "Last name of person", :required => false
         param :ip, String, :desc => "Optional IP address", :required => false
         error :code => 408, :desc => "Request timeout"
         error :code => 404, :desc => "User location data unavailable"
