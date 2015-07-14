@@ -46,5 +46,6 @@ gem 'ipaddress', '~> 0.8'
 gem 'faraday', '~> 0.9'
 gem 'faraday_middleware', '~> 0.10'
 gem 'pessimize', '~> 0.1'
+gem 'apipie-rails', '~> 0.3.4'
 
 

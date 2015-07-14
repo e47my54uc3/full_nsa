@@ -6,13 +6,23 @@ class GeoApiController < ApplicationController
   include ConfigCoordinates
   include GeoLocation
   include HttpRequests
-  
+
+  api :GET, "/index", "List all user data"
   def index
     request = timed_get_all
     return (render json: @delayed, status: 408) if @delayed
 
     render json: { geo_api: request.body}, status: 200   
   end
+
+  api :GET, "/location", "Get user location data"
+
+  param :param, Hash, :desc => 'Param hash for all locations' do
+    param :first_name, String, :desc => "First name of person", :required => true
+    param :last_name, String, :desc => "Last name of person", :required => true
+    param :ip, String, :desc => "Optional IP address", :required => false
+  end
+
 
   def show
     ip_coords = config_ip_coords(params[:ip])
