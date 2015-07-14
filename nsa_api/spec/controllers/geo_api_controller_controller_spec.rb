@@ -1,52 +1,43 @@
 require 'rails_helper'
 require 'spec_helper'
 
-
-
 RSpec.describe GeoApiController, type: :controller do
 
-  describe GeoApiController do
-    context "process api calls gracefully" do
-       it "should handle timeouts gracefully" do
-        get :index
-        response.status.should be_in([200, 503])
-      end
+    context "External gov.blockscore calls" do
+      describe "get all files" do
+        it "gets a response from the blockscore api" do
+          VCR.use_cassette 'controller/gov_api_response' do
+            request = Faraday.get("https://gov.blockscore.com/api/people")
+            request.status.should be_in([200, 400])
+          end
+        end
 
-      it "should be successful for 98% of queries" do
-        get :index
-        if response.status == 200
-          json = JSON.parse(response.body)
-          json["geo_api"].length.should be(100)
+        it "Checks that 100 user objects are returned from blockscore" do
+          VCR.use_cassette 'controller/gov_api_response' do
+            request = Faraday.get("https://gov.blockscore.com/api/people")
+            response = JSON.parse(request.body)
+            expect(response.length).to be(100)
+          end
         end
       end
     end
 
-    context "Get user specific location data" do
-      it "should return a json object given a first and last name" do
-        get :show, {:first_name => "Rosamond", :last_name => "Tromp", ip: "50.250.223.177"}
-
-        if response.status == 200
-          json = JSON.parse(response.body)
-          json.length.should be(5)
-        else
-          response.status.should be(503)
+    context "Internal calls" do
+      describe "get all internal user objects" do
+        it "Checks that 100 objects are returned" do
+          VCR.use_cassette('controller/all_internal_data') do
+            request = Net::HTTP.get_response('localhost', '/', 3000).body
+            expect(JSON.parse(request)["geo_api"].length).to be(100)
+          end
         end
-      end
 
-
-      it "should return a 404 status if unavailable" do
-        get :show, {:first_name => "Raghu", :last_name => "Reddy", ip: "50.250.223.177"}
-        response.status.should be_in([404, 503])
-      end
-
-      it "should return an error if a user data is unavailable" do
-        get :show, {:first_name => "Raghu", :last_name => "Reddy", ip: "50.250.223.177"}
-        json = JSON.parse(response.body)
-        expect(json["error"]).to eq("No user location data available.")
-      end
-
+        it "Checks that the proper status is returned" do
+          VCR.use_cassette('controller/all_internal_data') do
+            request = Net::HTTP.new('localhost', 3000).get('/')
+            expect(request.code.to_i).to be_in([200, 408])
+          end
+        end
+      end 
     end
 
-    
-  end
 end

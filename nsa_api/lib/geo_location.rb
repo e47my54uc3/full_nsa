@@ -2,19 +2,10 @@
 module GeoLocation
   private
   
-  def config_ip(string_ip)
-    if IPAddress.valid?(string_ip) 
-      puts "Ip is ok"
-      get_ip_location(string_ip)
-    else
-      puts "Defaulting to an sf ip"
-      get_ip_location("24.7.88.70")
-    end
-  end
-
-  def get_ip_location(ip)
-    Unirest.get "http://ipinfo.io/#{ip}", #will default to an ip, get geo location
-                        headers:{ "Accept" => "application/json" }
+  def get_ip_coords(ip)
+    resp = Faraday.get("http://ipinfo.io/#{ip}/json")
+    coords = JSON.parse(resp.body)
+    coords["loc"].split(',').map(&:to_f)
   end
 
   def distance_km(loc1, loc2) #geodistance via haversine formula
@@ -31,7 +22,7 @@ module GeoLocation
     a = Math.sin(dlat_rad/2)**2 + Math.cos(lat1_rad) * Math.cos(lat2_rad) * Math.sin(dlon_rad/2)**2
     c = 2 * Math::atan2(Math::sqrt(a), Math::sqrt(1-a))
 
-    rkm * c # Delta in meters
+    (rkm * c).round(4) # Delta in meters
   end
 
 end
