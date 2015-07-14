@@ -7,57 +7,57 @@ For interactive documentation, please bundle, start the server, and visit http:/
 /index will yield the following:
 
 
-```javascript
-[
-  {
-    "first_name": "Alain",
-    "last_name": "Meier",
-    "phone_location": {
-      "latitude": 51.5033630,
-      "longitude": -0.1276250,
-      "elevation": 19.36
+
+  [
+    {
+      "first_name": "Alain",
+      "last_name": "Meier",
+      "phone_location": {
+        "latitude": 51.5033630,
+        "longitude": -0.1276250,
+        "elevation": 19.36
+      },
+      "stated_location": {
+        "latitude": 65.5033630,
+        "longitude": -0.1276250,
+        "elevation": 19.36
+      }
     },
-    "stated_location": {
-      "latitude": 65.5033630,
-      "longitude": -0.1276250,
-      "elevation": 19.36
+    {
+      "first_name": "Alfred",
+      "last_name": "Hitchcock",
+      "phone_location": {
+        "latitude": 51.5033630,
+        "longitude": -0.1276250,
+        "elevation": 2.19
+      },
+      "stated_location": {
+        "latitude": 62.5033630,
+        "longitude": -1.1276250,
+        "elevation": 30.60
+      }
     }
-  },
-  {
-    "first_name": "Alfred",
-    "last_name": "Hitchcock",
-    "phone_location": {
-      "latitude": 51.5033630,
-      "longitude": -0.1276250,
-      "elevation": 2.19
-    },
-    "stated_location": {
-      "latitude": 62.5033630,
-      "longitude": -1.1276250,
-      "elevation": 30.60
-    }
-  }
-]
-```
+  ]
+
 
 visiting /location with the following params
 
-```javascript
-{
-  "first_name": "Alain",
-  "last_name": "Meier",
-  "ip": "127.0.0.1"
-}
-```
+
+  {
+    "first_name": "Alain",
+    "last_name": "Meier",
+    "ip": "127.0.0.1"
+  }
+
 
 will yield:
 
-```javascript
-{
-  "first_name": "Alain",
-  "last_name": "Meier",
-  "phone_distance_from_ip": 120.5,
-  "stated_distance_from_ip": 50.12,
-  "stated_distance_from_phone": 73.9
-}
-```
+
+  {
+    "first_name": "Alain",
+    "last_name": "Meier",
+    "phone_distance_from_ip": 120.5,
+    "stated_distance_from_ip": 50.12,
+    "stated_distance_from_phone": 73.9
+  }
+
