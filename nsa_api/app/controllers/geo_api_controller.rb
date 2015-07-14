@@ -7,11 +7,11 @@ class GeoApiController < ApplicationController
   include GeoLocation
   include HttpRequests
 
-        #Documentation specific DSL:
+        #Apipie Documentation specific DSL:
         api :GET, "/index", "List all user data provided by the NSA."
         error :code => 408, :desc => "Request timeout"
         #End of documentation for /index
-        
+
   def index
     request = timed_get_all
     return (render json: @delayed, status: 408) if @delayed
@@ -19,11 +19,9 @@ class GeoApiController < ApplicationController
   end
 
         api :GET, "/location", "Get location data specific to a User."
-        param :user, Hash, :desc => 'User hash required for location data', :required => true do
-          param :first_name, String, :desc => "First name of person", :required => true
-          param :last_name, String, :desc => "Last name of person", :required => true
-          param :ip, String, :desc => "Optional IP address", :required => false
-        end
+        param :first_name, String, :desc => "First name of person", :required => true
+        param :last_name, String, :desc => "Last name of person", :required => true
+        param :ip, String, :desc => "Optional IP address", :required => false
         error :code => 408, :desc => "Request timeout"
         error :code => 404, :desc => "User location data unavailable"
 
