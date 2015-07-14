@@ -1,9 +1,9 @@
-require 'configurations'
+require 'config_coordinates'
 require 'geo_location'
 require 'http_requests'
 
 class GeoApiController < ApplicationController
-  include Configurations
+  include ConfigCoordinates
   include GeoLocation
   include HttpRequests
   

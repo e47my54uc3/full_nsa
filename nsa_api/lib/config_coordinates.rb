@@ -1,4 +1,4 @@
-module Configurations
+module ConfigCoordinates
   private
   
   def config_ip_coords(string_ip)

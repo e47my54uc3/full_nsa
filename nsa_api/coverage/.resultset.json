@@ -337,7 +337,7 @@
         null,
         null
       ],
-      "/Users/admin/Desktop/Nsa_challenge/nsa_api/lib/configurations.rb": [
+      "/Users/admin/Desktop/Nsa_challenge/nsa_api/lib/config_coordinates.rb": [
         1,
         1,
         null,
@@ -522,6 +522,6 @@
         null
       ]
     },
-    "timestamp": 1436846905
+    "timestamp": 1436847371
   }
 }
