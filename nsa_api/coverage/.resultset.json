@@ -288,6 +288,12 @@
         1,
         1,
         1,
+        1,
+        5,
+        null,
+        1,
+        5,
+        null,
         null
       ],
       "/Users/admin/Desktop/Nsa_challenge/nsa_api/app/controllers/geo_api_controller.rb": [
@@ -469,6 +475,6 @@
         null
       ]
     },
-    "timestamp": 1436830259
+    "timestamp": 1436832287
   }
 }

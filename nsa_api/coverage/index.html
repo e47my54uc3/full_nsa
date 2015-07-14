@@ -14,26 +14,26 @@
       <img src="./assets/0.10.0/loading.gif" alt="loading"/>
     </div>
     <div id="wrapper" style="display:none;">
-      <div class="timestamp">Generated <abbr class="timeago" title="2015-07-13T16:30:59-07:00">2015-07-13T16:30:59-07:00</abbr></div>
+      <div class="timestamp">Generated <abbr class="timeago" title="2015-07-13T17:04:47-07:00">2015-07-13T17:04:47-07:00</abbr></div>
       <ul class="group_tabs"></ul>
 
       <div id="content">
         <div class="file_list_container" id="AllFiles">
   <h2>
     <span class="group_name">All Files</span>
-    (<span class="covered_percent"><span class="red">73.68%</span></span>
+    (<span class="covered_percent"><span class="red">74.36%</span></span>
      covered at
      <span class="covered_strength">
-       <span class="red">
-         1.0
+       <span class="green">
+         1.04
        </span>
     </span> hits/line)
   </h2>
   <a name="AllFiles"></a>
   <div>
     <b>23</b> files in total.
-    <b>152</b> relevant lines. 
-    <span class="green"><b>112</b> lines covered</span> and
+    <b>156</b> relevant lines. 
+    <span class="green"><b>116</b> lines covered</span> and
     <span class="red"><b>40</b> lines missed </span>
   </div>
   <table class="file_list">
@@ -273,11 +273,11 @@
       <tr>
         <td class="strong"><a href="#eed5b60bb4960966b4aa98d68695b2da428df109" class="src_link" title="spec/support/vcr_setup.rb">spec/support/vcr_setup.rb</a></td>
         <td class="green strong">100.0 %</td>
-        <td>4</td>
-        <td>3</td>
-        <td>3</td>
+        <td>10</td>
+        <td>7</td>
+        <td>7</td>
         <td>0</td>
-        <td>1.0</td>
+        <td>2.1</td>
       </tr>
       
     </tbody>
@@ -3199,8 +3199,8 @@
     <h3>spec/support/vcr_setup.rb</h3>
     <h4><span class="green">100.0 %</span> covered</h4>
     <div>
-      <b>3</b> relevant lines. 
-      <span class="green"><b>3</b> lines covered</span> and
+      <b>7</b> relevant lines. 
+      <span class="green"><b>7</b> lines covered</span> and
       <span class="red"><b>0</b> lines missed.</span>
     </div>
   </div>
@@ -3226,7 +3226,43 @@
           <code class="ruby">  c.hook_into :faraday</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="4">
+        <li class="covered" data-hits="1" data-linenumber="4">
+          <span class="hits">1</span>
+          
+          <code class="ruby">  c.before_http_request do |request|</code>
+        </li>
+      
+        <li class="covered" data-hits="5" data-linenumber="5">
+          <span class="hits">5</span>
+          
+          <code class="ruby">    VCR.insert_cassette(&#39;global&#39;, :record =&gt; :new_episodes)</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="6">
+          
+          
+          <code class="ruby">  end</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="7">
+          <span class="hits">1</span>
+          
+          <code class="ruby">  c.after_http_request do |request|</code>
+        </li>
+      
+        <li class="covered" data-hits="5" data-linenumber="8">
+          <span class="hits">5</span>
+          
+          <code class="ruby">    VCR.eject_cassette</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="9">
+          
+          
+          <code class="ruby">  end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="10">
           
           
           <code class="ruby">end</code>

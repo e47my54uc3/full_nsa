@@ -25,19 +25,20 @@ RSpec.describe GeoApiController, type: :controller do
       end
 
    context "nsa_api calls" do
-    it "Should match the data provided to blockscore" do
+    it "Should match the data provided by blockscore" do
 
-      VCR.use_cassette 'controller/gov_api_response' do
-        @request = Faraday.get("https://gov.blockscore.com/api/people")
-        @request = JSON.parse(@request.body)
-
+      VCR.use_cassette 'controller/nsa_api' do
+        request = Faraday.get("https://gov.blockscore.com/api/people")
+        @request = JSON.parse(request.body)
       end
 
-      VCR.use_cassette 'controller/nsa_api_all' do
-        @local = Faraday.get("http://localhost:3000")
-
-        binding.pry
-      end
+        local = Unirest.get("http://localhost:3000")  
+        binding.pry     
+        local = JSON.parse(local.body)["geo_api"]
+        
+        
+        local == @request
+     
 
     end
 
