@@ -14,7 +14,7 @@
       <img src="./assets/0.10.0/loading.gif" alt="loading"/>
     </div>
     <div id="wrapper" style="display:none;">
-      <div class="timestamp">Generated <abbr class="timeago" title="2015-07-13T19:29:51-07:00">2015-07-13T19:29:51-07:00</abbr></div>
+      <div class="timestamp">Generated <abbr class="timeago" title="2015-07-13T21:08:25-07:00">2015-07-13T21:08:25-07:00</abbr></div>
       <ul class="group_tabs"></ul>
 
       <div id="content">
@@ -25,7 +25,7 @@
      covered at
      <span class="covered_strength">
        <span class="green">
-         3.61
+         3.64
        </span>
     </span> hits/line)
   </h2>
@@ -223,7 +223,7 @@
       <tr>
         <td class="strong"><a href="#4aab32ad0e35f468220d1f03df3ea15043d7a432" class="src_link" title="lib/geo_location.rb">lib/geo_location.rb</a></td>
         <td class="green strong">100.0 %</td>
-        <td>28</td>
+        <td>29</td>
         <td>16</td>
         <td>16</td>
         <td>0</td>
@@ -267,7 +267,7 @@
         <td>11</td>
         <td>10</td>
         <td>1</td>
-        <td>4.2</td>
+        <td>4.7</td>
       </tr>
       
       <tr>
@@ -2315,7 +2315,7 @@
         <li class="covered" data-hits="5" data-linenumber="6">
           <span class="hits">5</span>
           
-          <code class="ruby">    resp = Faraday.get(&quot;http://ipinfo.io/#{ip}/json&quot;)</code>
+          <code class="ruby">    resp = Net::HTTP.get_response(URI(&quot;http://ipinfo.io/#{ip}/json&quot;))</code>
         </li>
       
         <li class="covered" data-hits="5" data-linenumber="7">
@@ -2324,127 +2324,133 @@
           <code class="ruby">    coords = JSON.parse(resp.body)</code>
         </li>
       
-        <li class="covered" data-hits="5" data-linenumber="8">
+        <li class="never" data-hits="" data-linenumber="8">
+          
+          
+          <code class="ruby">    </code>
+        </li>
+      
+        <li class="covered" data-hits="5" data-linenumber="9">
           <span class="hits">5</span>
           
           <code class="ruby">    coords[&quot;loc&quot;].split(&#39;,&#39;).map(&amp;:to_f)</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="9">
+        <li class="never" data-hits="" data-linenumber="10">
           
           
           <code class="ruby">  end</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="10">
+        <li class="never" data-hits="" data-linenumber="11">
           
           
           <code class="ruby"></code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="11">
+        <li class="covered" data-hits="1" data-linenumber="12">
           <span class="hits">1</span>
           
           <code class="ruby">  def distance_km(loc1, loc2) #geodistance via haversine formula</code>
         </li>
       
-        <li class="covered" data-hits="5" data-linenumber="12">
+        <li class="covered" data-hits="5" data-linenumber="13">
           <span class="hits">5</span>
           
           <code class="ruby">    rad_per_deg = Math::PI/180  # PI / 180</code>
         </li>
       
-        <li class="covered" data-hits="5" data-linenumber="13">
+        <li class="covered" data-hits="5" data-linenumber="14">
           <span class="hits">5</span>
           
           <code class="ruby">    rkm = 6371                  # Earth radius in kilometers</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="14">
+        <li class="never" data-hits="" data-linenumber="15">
           
           
           <code class="ruby"></code>
         </li>
       
-        <li class="covered" data-hits="5" data-linenumber="15">
+        <li class="covered" data-hits="5" data-linenumber="16">
           <span class="hits">5</span>
           
           <code class="ruby">    dlat_rad = (loc2.first-loc1.first) * rad_per_deg  # Delta, converted to rad</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="16">
+        <li class="never" data-hits="" data-linenumber="17">
           
           
           <code class="ruby"></code>
         </li>
       
-        <li class="covered" data-hits="5" data-linenumber="17">
+        <li class="covered" data-hits="5" data-linenumber="18">
           <span class="hits">5</span>
           
           <code class="ruby">    dlon_rad = (loc2.last-loc1.last) * rad_per_deg</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="18">
+        <li class="never" data-hits="" data-linenumber="19">
           
           
           <code class="ruby"></code>
-        </li>
-      
-        <li class="covered" data-hits="15" data-linenumber="19">
-          <span class="hits">15</span>
-          
-          <code class="ruby">    lat1_rad, lon1_rad = loc1.map {|i| i * rad_per_deg }</code>
         </li>
       
         <li class="covered" data-hits="15" data-linenumber="20">
           <span class="hits">15</span>
           
+          <code class="ruby">    lat1_rad, lon1_rad = loc1.map {|i| i * rad_per_deg }</code>
+        </li>
+      
+        <li class="covered" data-hits="15" data-linenumber="21">
+          <span class="hits">15</span>
+          
           <code class="ruby">    lat2_rad, lon2_rad = loc2.map {|i| i * rad_per_deg }</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="21">
+        <li class="never" data-hits="" data-linenumber="22">
           
           
           <code class="ruby"></code>
-        </li>
-      
-        <li class="covered" data-hits="5" data-linenumber="22">
-          <span class="hits">5</span>
-          
-          <code class="ruby">    a = Math.sin(dlat_rad/2)**2 + Math.cos(lat1_rad) * Math.cos(lat2_rad) * Math.sin(dlon_rad/2)**2</code>
         </li>
       
         <li class="covered" data-hits="5" data-linenumber="23">
           <span class="hits">5</span>
           
+          <code class="ruby">    a = Math.sin(dlat_rad/2)**2 + Math.cos(lat1_rad) * Math.cos(lat2_rad) * Math.sin(dlon_rad/2)**2</code>
+        </li>
+      
+        <li class="covered" data-hits="5" data-linenumber="24">
+          <span class="hits">5</span>
+          
           <code class="ruby">    c = 2 * Math::atan2(Math::sqrt(a), Math::sqrt(1-a))</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="24">
+        <li class="never" data-hits="" data-linenumber="25">
           
           
           <code class="ruby"></code>
         </li>
       
-        <li class="covered" data-hits="5" data-linenumber="25">
+        <li class="covered" data-hits="5" data-linenumber="26">
           <span class="hits">5</span>
           
           <code class="ruby">    (rkm * c).round(4) # Delta in meters</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="26">
+        <li class="never" data-hits="" data-linenumber="27">
           
           
           <code class="ruby">  end</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="27">
+        <li class="never" data-hits="" data-linenumber="28">
           
           
           <code class="ruby"></code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="28">
+        <li class="never" data-hits="" data-linenumber="29">
           
           
           <code class="ruby">end</code>
@@ -3308,8 +3314,8 @@
           <code class="ruby">config.before(:each) do  </code>
         </li>
       
-        <li class="covered" data-hits="13" data-linenumber="10">
-          <span class="hits">13</span>
+        <li class="covered" data-hits="15" data-linenumber="10">
+          <span class="hits">15</span>
           
           <code class="ruby">DatabaseCleaner.strategy = :transaction  </code>
         </li>
@@ -3356,8 +3362,8 @@
           <code class="ruby">config.before(:each) do  </code>
         </li>
       
-        <li class="covered" data-hits="13" data-linenumber="18">
-          <span class="hits">13</span>
+        <li class="covered" data-hits="15" data-linenumber="18">
+          <span class="hits">15</span>
           
           <code class="ruby">DatabaseCleaner.start  </code>
         </li>
@@ -3380,8 +3386,8 @@
           <code class="ruby">config.after(:each) do  </code>
         </li>
       
-        <li class="covered" data-hits="13" data-linenumber="22">
-          <span class="hits">13</span>
+        <li class="covered" data-hits="15" data-linenumber="22">
+          <span class="hits">15</span>
           
           <code class="ruby">DatabaseCleaner.clean  </code>
         </li>

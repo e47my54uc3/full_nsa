@@ -3,8 +3,9 @@ module GeoLocation
   private
   
   def get_ip_coords(ip)
-    resp = Faraday.get("http://ipinfo.io/#{ip}/json")
+    resp = Net::HTTP.get_response(URI("http://ipinfo.io/#{ip}/json"))
     coords = JSON.parse(resp.body)
+    
     coords["loc"].split(',').map(&:to_f)
   end
 
