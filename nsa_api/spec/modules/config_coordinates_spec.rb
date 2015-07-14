@@ -9,8 +9,6 @@ end
 RSpec.describe ConfigCoordinates do
 
   describe "Configuring an IP" do
-    
-
     it "returns coordinates for a valid IP" do
       expect(config_ip_coords("208.184.96.233")).to eq(get_ip_coords("208.184.96.233"))
     end
