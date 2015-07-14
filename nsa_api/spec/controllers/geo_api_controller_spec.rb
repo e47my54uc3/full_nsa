@@ -50,9 +50,7 @@ RSpec.describe GeoApiController, type: :controller do
             expect(data["stated_distance_from_phone"]).to be_a(Float)
           end
         end
-      end 
-
-      describe "get successful or delayed status" do
+      
         it "responds with the appropriate status" do
           VCR.use_cassette('controller/specific_internal_data') do
             request = Net::HTTP.get_response('localhost', '/location?last_name=Tromp&first_name=Rosamond', 3000)
